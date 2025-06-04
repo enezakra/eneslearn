@@ -2,61 +2,63 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
-.card {
-  background: white;
-  padding: 40px 30px;
+.container {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  max-width: 500px;
-  width: 90%;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: 5% auto;
 }
 .logo {
-  font-size: 26px;
+  font-size: 32px;
   font-weight: bold;
   color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
 }
-.tagline {
+.slogan {
+  text-align: center;
   font-size: 15px;
   color: #666;
   margin-bottom: 30px;
 }
 h1 {
-  font-size: 22px;
-  color: #111;
-  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 p.description {
   font-size: 16px;
   color: #333;
   margin-bottom: 25px;
+  line-height: 1.7;
 }
-.features {
-  text-align: left;
-  font-size: 14px;
-  margin-bottom: 25px;
-  color: #444;
-}
-.features li {
-  margin-bottom: 8px;
+.button-group {
+  text-align: center;
 }
 a.button {
-  display: block;
-  padding: 12px;
-  margin: 8px 0;
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
   background: #0070f3;
   color: white;
   text-decoration: none;
   border-radius: 8px;
-  transition: background 0.3s;
+  transition: 0.3s;
 }
 a.button:hover {
   background: #0051c3;
+}
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
 }

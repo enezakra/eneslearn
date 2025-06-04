@@ -2,63 +2,79 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-  background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1470&q=80');
+  background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  background-image: url('https://images.unsplash.com/photo-1581090700227-1e8cfa4eb0e1?auto=format&fit=crop&w=1470&q=80');
   background-size: cover;
-  background-position: center;
   background-attachment: fixed;
+  color: #1a1a1a;
 }
 .container {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.9);
   padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
-  max-width: 700px;
   margin: 5% auto;
+  max-width: 700px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
 }
 .logo {
   font-size: 32px;
   font-weight: bold;
-  color: #1a1a1a;
+  color: #0070f3;
   text-align: center;
-  margin-bottom: 10px;
 }
-.slogan {
-  text-align: center;
-  font-size: 15px;
-  color: #666;
-  margin-bottom: 30px;
-}
-h1 {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 15px;
-}
-p.description {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 25px;
-  line-height: 1.7;
-}
-.button-group {
+.nav {
+  margin-top: 10px;
   text-align: center;
 }
 a.button {
   display: inline-block;
-  margin: 10px;
-  padding: 12px 20px;
+  margin: 12px;
+  padding: 12px 24px;
   background: #0070f3;
   color: white;
   text-decoration: none;
   border-radius: 8px;
-  transition: 0.3s;
+  font-weight: bold;
 }
 a.button:hover {
   background: #0051c3;
+}
+.toggle-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.toggle-button {
+  padding: 10px 16px;
+  background: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.toggle-content {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  background: white;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  z-index: 999;
 }
 footer {
   margin-top: 30px;
   text-align: center;
   font-size: 13px;
-  color: #999;
+}
+footer a {
+  color: #0070f3;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
 }

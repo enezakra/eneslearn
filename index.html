@@ -1,32 +1,38 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>EnesLearn | AI-powered English Platform</title>
+  <title>EnesLearn | Yapay Zeka Destekli İngilizce</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3135/3135789.png">
 </head>
 <body>
   <div class="container">
     <div class="logo">📘 EnesLearn</div>
-    <div class="slogan">AI-powered English education platform</div>
-
-    <h1>Welcome to EnesLearn</h1>
-    <p class="description">
-      EnesLearn, yalnızca bir dil öğrenme aracı değil; İngilizceyi hayatının parçası yapmanı sağlayacak kişisel bir yol arkadaşıdır. Burada ezber yok. Kendi hızınla, seviyene uygun şekilde ilerlersin. Platform seni tanır, eksiklerini analiz eder ve ona göre yönlendirir. Gerektiğinde Türkçe destek alabilir, motivasyonunu kaybetmeden yola devam edersin.<br><br>
-      Geleneksel sistemlerin aksine burada öğretmenler değil, sen merkezdesin. Yapay zekâ destekli içerikler sayesinde her gününü verimli geçirir, ne öğrendiğini anında test edebilirsin. Oyunlaştırılmış bölümlerle öğrenirken eğlenir, görsel anlatımlarla zihnine kalıcı yerleştirirsin.<br><br>
-      EnesLearn, sadece bugünün değil; geleceğin İngilizce eğitim sistemini bugünden sunuyor.<br>
-      Senin için tasarlandı. Kolayca başla, istikrarlı bir şekilde ilerle, her geçen gün geliştiğini fark et.
-    </p>
-
-    <div class="button-group">
-      <a class="button" href="login.html">🔐 User Login</a>
-      <a class="button" href="register.html">📝 User Register</a>
-      <a class="button" href="dashboard.html">📊 Go to Dashboard</a>
+    <div class="nav">
+      <a class="button" href="login.html">Giriş Yap</a>
+      <a class="button" href="register.html">Üye Ol</a>
+      <a class="button" href="dashboard.html">Ana Sayfa</a>
     </div>
-
-    <footer>© 2025 EnesLearn. All rights reserved.</footer>
   </div>
+
+  <div class="toggle-box">
+    <button class="toggle-button" onclick="toggleWhy()">Neden EnesLearn?</button>
+    <div id="whyContent" class="toggle-content">
+      EnesLearn, klasik ezbere dayalı sistemlerden farklı olarak seni merkeze koyar. Yapay zeka destekli yapısıyla seviyeni analiz eder, eksiklerini bulur ve sana özel bir eğitim planı sunar. Eğlenceli, oyunlaştırılmış ve Türkçe destekli içerikleriyle hem öğrenmeni hızlandırır hem de motivasyonunu yüksek tutar. Bu sadece bir platform değil, seni ileriye taşıyacak dijital bir eğitim yolculuğudur.
+    </div>
+  </div>
+
+  <footer>
+    © 2025 EnesLearn. <a href="https://eneslearn.com/kullanim-sartlari">Tüm Hakları Saklıdır</a>
+  </footer>
+
+<script>
+  function toggleWhy() {
+    var content = document.getElementById("whyContent");
+    content.style.display = content.style.display === "block" ? "none" : "block";
+  }
+</script>
 </body>
 </html>

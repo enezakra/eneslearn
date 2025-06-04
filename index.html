@@ -1,31 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>EnesLearn</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EnesLearn - Yapay Zeka Destekli Eğitim</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body style="background-image: url('background.jpg'); background-size: cover;">
-    <div class="container">
-        <img src="logo.png" alt="EnesLearn Logo" class="logo">
-        <h1>EnesLearn</h1>
-        <p class="slogan">Yapay zekâ destekli İngilizce öğrenme platformu</p>
-        <h2>İngilizce öğrenmeye hemen başla!</h2>
-        <p>Kişiselleştirilmiş içerikler, interaktif oyunlar ve seviye analizi seni bekliyor.</p>
-        <div class="buttons">
-            <a href="#">Giriş Yap</a>
-            <a href="#">Üye Ol</a>
-            <a href="#">Ana Sayfa</a>
-            <a href="#">İletişim</a>
-        </div>
-        <div class="neden-box">
-            <h3>Neden EnesLearn?</h3>
-            <p>EnesLearn, klasik eğitim kalıplarının dışına çıkar. Yapay zekâyla seviyeni analiz eder, eksiklerini belirler ve sana özel bir öğrenme planı oluşturur. Gerçekten öğrenmeni sağlayacak, oyunlaştırılmış içerikler ve Türkçe destekli açıklamalarla dolu bir sistem sunar.</p>
-        </div>
-        <footer>
-            <a href="hukuki.html">© 2025 EnesLearn. Tüm Hakları Saklıdır</a>
-        </footer>
+<body>
+  <div class="main-container">
+    <img src="logo.png" alt="EnesLearn Logo" class="logo" />
+    <h1>EnesLearn</h1>
+    <p class="subtitle">Yapay zekâ destekli İngilizce öğrenme platformu</p>
+    <h2>İngilizce öğrenmeye hemen başla!</h2>
+    <p class="desc">Kişiselleştirilmiş içerikler, interaktif oyunlar ve seviye analizi seni bekliyor.</p>
+    <div class="buttons">
+      <button onclick="alert('Giriş sayfasına yönlendirilecek')">Giriş Yap</button>
+      <button onclick="alert('Üyelik sayfasına yönlendirilecek')">Üye Ol</button>
+      <button onclick="alert('Anasayfaya yönlendirilecek')">Ana Sayfa</button>
+      <button onclick="alert('İletişim sayfasına yönlendirilecek')">İletişim</button>
     </div>
+  </div>
+
+  <div class="neden-kutu" onclick="toggleInfo()">Neden EnesLearn?</div>
+  <div id="neden-box" class="neden-content">
+    <h3>Neden EnesLearn?</h3>
+    <p>EnesLearn, klasik eğitim kalıplarının dışına çıkar. Yapay zekâyla seviyeni analiz eder, eksiklerini belirler ve sana özel bir öğrenme planı oluşturur. Gerçekten öğrenmeni sağlayacak, oyunlaştırılmış içerikler ve Türkçe destekli açıklamalarla dolu bir sistem sunar. İngilizce bilmeyenler için özel olarak geliştirilen bu platform, seni dijital bir öğrenme yolculuğuna davet eder.</p>
+  </div>
+
+  <footer>
+    <a href="hukuki.html">© 2025 EnesLearn. Tüm Hakları Saklıdır</a>
+  </footer>
+
+  <script>
+    function toggleInfo() {
+      const infoBox = document.getElementById("neden-box");
+      infoBox.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>

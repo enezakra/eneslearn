@@ -1,47 +1,72 @@
 
 body {
-    font-family: Arial, sans-serif;
-    color: white;
-    margin: 0;
-    padding: 0;
-    background-color: #111;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
 }
-.container {
-    background: rgba(0,0,0,0.75);
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+
+.main-container {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  border-radius: 12px;
+  margin: 5% auto;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
+
 .logo {
-    width: 80px;
-    margin-bottom: 20px;
+  width: 60px;
+  margin-bottom: 10px;
 }
-.buttons a {
-    display: inline-block;
-    background-color: #009dff;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 8px;
-    text-decoration: none;
+
+.buttons button {
+  background-color: #00aaff;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
 }
-.buttons a:hover {
-    background-color: #007acc;
+
+.neden-kutu {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #00aaff;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
 }
-.neden-box {
-    background-color: #222;
-    margin-top: 40px;
-    padding: 20px;
-    border-radius: 10px;
+
+.neden-content {
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+  background-color: #222;
+  padding: 20px;
+  width: 320px;
+  border-radius: 10px;
+  display: none;
+  z-index: 10;
 }
+
+.neden-content.show {
+  display: block;
+}
+
 footer {
-    margin-top: 30px;
+  text-align: center;
+  margin-top: 40px;
 }
+
 footer a {
-    color: #66ccff;
-    text-decoration: none;
+  color: #00aaff;
+  text-decoration: none;
 }

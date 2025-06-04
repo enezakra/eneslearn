@@ -3,15 +3,17 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>EnesLearn | AI Destekli Dil Eğitimi</title>
+  <title>EnesLearn | Yapay Zekâ Destekli İngilizce</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" type="image/png">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3094/3094855.png">
   <script>
     function setLang(lang) {
-      const tr = document.querySelectorAll('.lang-tr');
-      const en = document.querySelectorAll('.lang-en');
-      tr.forEach(e => e.style.display = (lang === 'tr' ? 'block' : 'none'));
-      en.forEach(e => e.style.display = (lang === 'en' ? 'block' : 'none'));
+      document.querySelectorAll('.lang-tr').forEach(e => e.style.display = (lang === 'tr' ? 'block' : 'none'));
+      document.querySelectorAll('.lang-en').forEach(e => e.style.display = (lang === 'en' ? 'block' : 'none'));
+    }
+    function toggleWhy() {
+      const box = document.getElementById("whyContent");
+      box.style.display = box.style.display === "block" ? "none" : "block";
     }
   </script>
 </head>
@@ -21,7 +23,10 @@
       <button onclick="setLang('tr')" class="button">TR</button>
       <button onclick="setLang('en')" class="button">EN</button>
     </div>
-    <div class="logo">📘 EnesLearn</div>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3094/3094855.png" alt="logo">
+      EnesLearn
+    </div>
 
     <div class="lang-tr">
       <p style="text-align:center;">İngilizce öğrenmeye hemen başla! Yapay zekâ destekli sistemimizle kişiselleştirilmiş deneyim seni bekliyor.</p>
@@ -42,8 +47,15 @@
     </div>
 
     <footer>
-      © 2025 EnesLearn. <a href="https://eneslearn.com/kullanim-sartlari">Tüm Hakları Saklıdır</a>
+      © 2025 EnesLearn. <a href="terms.html">Tüm Hakları Saklıdır</a>
     </footer>
+  </div>
+
+  <div class="toggle-box">
+    <button class="toggle-button" onclick="toggleWhy()">Neden EnesLearn?</button>
+    <div id="whyContent" class="toggle-content">
+      EnesLearn, klasik ezbere dayalı sistemlerden farklı olarak seni merkeze koyar. Yapay zeka destekli yapısıyla seviyeni analiz eder, eksiklerini bulur ve sana özel bir eğitim planı sunar. Eğlenceli, oyunlaştırılmış ve Türkçe destekli içerikleriyle hem öğrenmeni hızlandırır hem de motivasyonunu yüksek tutar. Bu sadece bir platform değil, seni ileriye taşıyacak dijital bir eğitim yolculuğudur.
+    </div>
   </div>
 </body>
 </html>

@@ -1,2 +1,57 @@
-<!-- Updated EnesLearn Homepage with user login and TR/EN toggle -->
-<html><body><h1>Welcome to EnesLearn</h1></body></html>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>EnesLearn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="EnesLearn Logo" class="logo">
+        <div class="language-switch">
+            <button onclick="switchLanguage('tr')">TR</button>
+            <button onclick="switchLanguage('en')">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Welcome to EnesLearn</h1>
+        <p>Select login method:</p>
+        <div class="login-options">
+            <button>Login with Email</button>
+            <button onclick="showProviders()">Other Methods</button>
+        </div>
+        <div id="providers" style="display:none;">
+            <button>Google</button>
+            <button>Apple</button>
+            <button>Facebook</button>
+            <button>Outlook</button>
+        </div>
+    </main>
+
+    <footer>
+        <a href="legal.html">© 2025 EnesLearn. Tüm Hakları Saklıdır</a>
+    </footer>
+
+    <div id="eneslearn-box" onclick="toggleBox()">
+        Neden EnesLearn?
+    </div>
+    <div id="info-box" style="display:none;">
+        <strong>EnesLearn,</strong> yapay zeka destekli içerikleriyle öğrenmeyi kolaylaştırır. Her seviyeye uygun içerikler, günlük güncellemeler, testler ve ilham verici öğrenme ortamlarıyla gerçek bir gelişim sağlar.
+    </div>
+
+    <script>
+        function toggleBox() {
+            const box = document.getElementById('info-box');
+            box.style.display = box.style.display === 'none' ? 'block' : 'none';
+        }
+        function showProviders() {
+            document.getElementById('providers').style.display = 'block';
+        }
+        function switchLanguage(lang) {
+            alert("Dil değiştirme özelliği şu anda devrede değil.");
+        }
+    </script>
+</body>
+</html>

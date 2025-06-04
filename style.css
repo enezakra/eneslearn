@@ -1,32 +1,47 @@
+
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #222;
-    color: #fff;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
     text-align: center;
 }
 .container {
-    padding: 40px;
+    background: rgba(0,0,0,0.75);
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
 }
 .logo {
     width: 80px;
     margin-bottom: 20px;
 }
-.buttons .button {
+.buttons a {
     display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
     background-color: #009dff;
     color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 5px;
 }
-.neden {
-    background-color: #333;
-    margin-top: 30px;
+.buttons a:hover {
+    background-color: #007acc;
+}
+.neden-box {
+    background-color: #222;
+    margin-top: 40px;
     padding: 20px;
     border-radius: 10px;
 }
 footer {
     margin-top: 30px;
+}
+footer a {
+    color: #66ccff;
+    text-decoration: none;
 }

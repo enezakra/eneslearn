@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -16,10 +17,10 @@
         .lang-switch {
             position: absolute;
             top: 10px;
-            left: 10px;
+            right: 10px;
         }
         .lang-switch button {
-            margin-right: 5px;
+            margin-left: 5px;
             padding: 5px 10px;
         }
         .container {
@@ -28,10 +29,9 @@
             background-color: rgba(0, 0, 0, 0.6);
             padding: 30px;
             border-radius: 10px;
-            display: inline-block;
-        }
-        .logo {
-            width: 100px;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
         }
         .buttons button {
             margin: 10px;
@@ -51,6 +51,11 @@
             padding: 10px;
             font-size: 0.9em;
         }
+        .footer a {
+            color: #99ccff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
         .why-button {
             position: fixed;
             bottom: 20px;
@@ -65,7 +70,7 @@
             position: fixed;
             bottom: 70px;
             right: 20px;
-            width: 300px;
+            width: 320px;
             background-color: #222;
             padding: 15px;
             border-radius: 8px;
@@ -78,7 +83,6 @@
         <button onclick="setLanguage('en')">EN</button>
     </div>
     <div class="container">
-        <img src="logo.png" alt="EnesLearn Logo" class="logo">
         <h1 id="welcome">EnesLearn'e Hoş Geldiniz</h1>
         <p id="tagline">Yapay zeka destekli İngilizce öğrenme platformu</p>
         <div class="buttons">
@@ -90,19 +94,19 @@
             <button onclick="alert('Outlook')">Outlook</button>
         </div>
     </div>
-
     <div class="why-button" onclick="toggleWhy()">Neden EnesLearn?</div>
     <div class="why-text" id="whyText">
-        <strong>EnesLearn, klasik eğitim yöntemlerini aşan bir sistemdir.</strong><br>
-        Yapay zeka destekli analizlerle seviyeni tespit eder, eksiklerini belirler
-        ve sana özel içerikler sunar. Gerçekten öğrenmeni sağlayacak oyunlaştırılmış
-        modüller ve Türkçe destekli açıklamalarla donatılmıştır.
+        <strong>EnesLearn ile İngilizce öğrenmek hiç bu kadar etkili olmamıştı!</strong><br>
+        Yapay zeka destekli seviyeni analiz eder, sana özel içerikler sunar ve eksiklerini tespit eder.
+        Oyunlaştırılmış öğrenme modeliyle, motive edici ve etkileşimli bir deneyim yaşarsın.
+        İngilizce öğrenmenin en akıllı yolu burada seni bekliyor!
     </div>
-
     <div class="footer">
-        © 2025 EnesLearn. Tüm Hakları Saklıdır. | <a href="#">Kullanım Şartları</a> | <a href="#">Gizlilik Politikası</a> | <a href="#">Çerezler</a>
+        © 2025 EnesLearn. Tüm Hakları Saklıdır. |
+        <a href="legal.html">Kullanım Şartları</a> |
+        <a href="privacy.html">Gizlilik Politikası</a> |
+        <a href="cookies.html">Çerezler</a>
     </div>
-
     <script>
         function toggleWhy() {
             var x = document.getElementById("whyText");

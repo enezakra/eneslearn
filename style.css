@@ -2,12 +2,12 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+  background: url('https://images.unsplash.com/photo-1581090700227-1e8e1f1a5b9c?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
 }
 .container {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   padding: 40px;
   margin: 5% auto;
   max-width: 760px;
@@ -19,18 +19,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
+  font-size: 34px;
   font-weight: bold;
   color: #00d1ff;
 }
 .logo img {
-  height: 40px;
+  height: 42px;
   margin-right: 12px;
-}
-.lang-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }
 .button {
   display: inline-block;
@@ -68,10 +63,12 @@ body {
   background: white;
   color: black;
   padding: 20px;
-  width: 320px;
+  width: 360px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   border-radius: 8px;
   font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
 }
 footer {
   margin-top: 30px;
@@ -84,15 +81,4 @@ footer a {
 }
 footer a:hover {
   text-decoration: underline;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-input, textarea {
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  font-size: 14px;
 }

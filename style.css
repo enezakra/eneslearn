@@ -1,72 +1,54 @@
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
 }
-
-.main-container {
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 40px;
-  border-radius: 12px;
-  margin: 5% auto;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 40px;
+    max-width: 800px;
+    margin: 80px auto;
+    border-radius: 10px;
 }
-
 .logo {
-  width: 60px;
-  margin-bottom: 10px;
+    width: 80px;
+    margin-bottom: 10px;
 }
-
-.buttons button {
-  background-color: #00aaff;
-  color: white;
-  padding: 12px 18px;
-  border: none;
-  margin: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
+.buttons a {
+    background: #009dff;
+    padding: 10px 20px;
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
 }
-
-.neden-kutu {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background: #00aaff;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 8px;
-  cursor: pointer;
+.neden-box {
+    margin-top: 20px;
+    cursor: pointer;
+    background: #007bbf;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
 }
-
 .neden-content {
-  position: fixed;
-  right: 20px;
-  bottom: 70px;
-  background-color: #222;
-  padding: 20px;
-  width: 320px;
-  border-radius: 10px;
-  display: none;
-  z-index: 10;
+    display: none;
+    margin-top: 15px;
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 5px;
 }
-
-.neden-content.show {
-  display: block;
-}
-
 footer {
-  text-align: center;
-  margin-top: 40px;
+    margin-top: 40px;
 }
-
-footer a {
-  color: #00aaff;
-  text-decoration: none;
+.language-switch {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+.language-switch button {
+    margin-left: 5px;
+    padding: 5px 10px;
 }

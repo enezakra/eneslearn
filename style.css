@@ -2,69 +2,41 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-  background-image: url('https://images.unsplash.com/photo-1581090700227-1e8cfa4eb0e1?auto=format&fit=crop&w=1470&q=80');
+  background: url('https://images.unsplash.com/photo-1581092588422-a3ff5f162b6f?auto=format&fit=crop&w=1650&q=80') no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
-  color: #1a1a1a;
+  color: #fff;
 }
 .container {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.65);
   padding: 40px;
-  margin: 5% auto;
-  max-width: 700px;
+  margin: 6% auto;
+  max-width: 720px;
   border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
 }
 .logo {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: bold;
-  color: #0070f3;
+  color: #00d1ff;
   text-align: center;
 }
-.nav {
-  margin-top: 10px;
-  text-align: center;
+.lang-toggle {
+  text-align: right;
+  margin-bottom: 10px;
 }
-a.button {
+.button {
   display: inline-block;
-  margin: 12px;
-  padding: 12px 24px;
-  background: #0070f3;
+  margin: 10px 12px;
+  padding: 14px 28px;
+  background: #00aaff;
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
+  transition: 0.3s;
 }
-a.button:hover {
-  background: #0051c3;
-}
-.toggle-box {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-.toggle-button {
-  padding: 10px 16px;
-  background: #0070f3;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.toggle-content {
-  display: none;
-  position: absolute;
-  bottom: 50px;
-  right: 0;
-  background: white;
-  padding: 20px;
-  width: 300px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  font-size: 14px;
-  color: #333;
-  z-index: 999;
+.button:hover {
+  background: #008ecc;
 }
 footer {
   margin-top: 30px;
@@ -72,7 +44,7 @@ footer {
   font-size: 13px;
 }
 footer a {
-  color: #0070f3;
+  color: #00d1ff;
   text-decoration: none;
 }
 footer a:hover {

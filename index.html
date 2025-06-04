@@ -3,36 +3,47 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>EnesLearn | Yapay Zeka Destekli İngilizce</title>
+  <title>EnesLearn | AI Destekli Dil Eğitimi</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3135/3135789.png">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" type="image/png">
+  <script>
+    function setLang(lang) {
+      const tr = document.querySelectorAll('.lang-tr');
+      const en = document.querySelectorAll('.lang-en');
+      tr.forEach(e => e.style.display = (lang === 'tr' ? 'block' : 'none'));
+      en.forEach(e => e.style.display = (lang === 'en' ? 'block' : 'none'));
+    }
+  </script>
 </head>
-<body>
+<body onload="setLang('tr')">
   <div class="container">
+    <div class="lang-toggle">
+      <button onclick="setLang('tr')" class="button">TR</button>
+      <button onclick="setLang('en')" class="button">EN</button>
+    </div>
     <div class="logo">📘 EnesLearn</div>
-    <div class="nav">
-      <a class="button" href="login.html">Giriş Yap</a>
-      <a class="button" href="register.html">Üye Ol</a>
-      <a class="button" href="dashboard.html">Ana Sayfa</a>
+
+    <div class="lang-tr">
+      <p style="text-align:center;">İngilizce öğrenmeye hemen başla! Yapay zekâ destekli sistemimizle kişiselleştirilmiş deneyim seni bekliyor.</p>
+      <div style="text-align:center;">
+        <a class="button" href="login.html">Giriş Yap</a>
+        <a class="button" href="register.html">Üye Ol</a>
+        <a class="button" href="dashboard.html">Ana Sayfa</a>
+      </div>
     </div>
-  </div>
 
-  <div class="toggle-box">
-    <button class="toggle-button" onclick="toggleWhy()">Neden EnesLearn?</button>
-    <div id="whyContent" class="toggle-content">
-      EnesLearn, klasik ezbere dayalı sistemlerden farklı olarak seni merkeze koyar. Yapay zeka destekli yapısıyla seviyeni analiz eder, eksiklerini bulur ve sana özel bir eğitim planı sunar. Eğlenceli, oyunlaştırılmış ve Türkçe destekli içerikleriyle hem öğrenmeni hızlandırır hem de motivasyonunu yüksek tutar. Bu sadece bir platform değil, seni ileriye taşıyacak dijital bir eğitim yolculuğudur.
+    <div class="lang-en">
+      <p style="text-align:center;">Start learning English now! Our AI-powered system offers a personalized experience just for you.</p>
+      <div style="text-align:center;">
+        <a class="button" href="login.html">Login</a>
+        <a class="button" href="register.html">Register</a>
+        <a class="button" href="dashboard.html">Home</a>
+      </div>
     </div>
+
+    <footer>
+      © 2025 EnesLearn. <a href="https://eneslearn.com/kullanim-sartlari">Tüm Hakları Saklıdır</a>
+    </footer>
   </div>
-
-  <footer>
-    © 2025 EnesLearn. <a href="https://eneslearn.com/kullanim-sartlari">Tüm Hakları Saklıdır</a>
-  </footer>
-
-<script>
-  function toggleWhy() {
-    var content = document.getElementById("whyContent");
-    content.style.display = content.style.display === "block" ? "none" : "block";
-  }
-</script>
 </body>
 </html>

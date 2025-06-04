@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>EnesLearn Giriş</title>
+    <meta charset="UTF-8">
+    <title>EnesLearn</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Giriş ve Kayıt Paneli Buraya Gelecek</h1>
+    <div class="lang-switch">
+        <button onclick="setLanguage('tr')">TR</button>
+        <button onclick="setLanguage('en')">EN</button>
+    </div>
+    <div class="container">
+        <img src="logo.png" alt="EnesLearn Logo" class="logo">
+        <h1 id="welcome">EnesLearn'e Hoş Geldiniz</h1>
+        <p id="tagline">Yapay zeka destekli İngilizce öğrenme platformu</p>
+        <div class="buttons">
+            <button onclick="alert('Giriş Yap')">Giriş Yap</button>
+            <button onclick="alert('Üye Ol')">Üye Ol</button>
+            <button onclick="alert('Google')">Google</button>
+            <button onclick="alert('Apple')">Apple</button>
+            <button onclick="alert('Facebook')">Facebook</button>
+            <button onclick="alert('Outlook')">Outlook</button>
+        </div>
+    </div>
+    <div class="why-button" onclick="toggleWhy()">Neden EnesLearn?</div>
+    <div class="why-text" id="whyText">
+        <strong>EnesLearn, klasik eğitim yöntemlerini aşan bir sistemdir.</strong><br>
+        Yapay zeka destekli analizlerle seviyeni tespit eder, eksiklerini belirler
+        ve sana özel içerikler sunar. Gerçekten öğrenmeni sağlayacak oyunlaştırılmış
+        modüller ve Türkçe destekli açıklamalarla donatılmıştır.
+    </div>
+    <div class="footer">
+        © 2025 EnesLearn. Tüm Hakları Saklıdır. |
+        <a href="terms.html">Kullanım Şartları</a> |
+        <a href="privacy.html">Gizlilik Politikası</a> |
+        <a href="cookies.html">Çerezler</a>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

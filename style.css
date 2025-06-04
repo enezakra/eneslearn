@@ -1,43 +1,32 @@
-
 body {
-    font-family: Arial, sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
     margin: 0;
-    padding: 0;
-}
-.main-container {
-    background: rgba(0, 0, 0, 0.75);
-    margin: 50px auto;
-    padding: 20px;
-    max-width: 800px;
-    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
     text-align: center;
+}
+.container {
+    padding: 40px;
 }
 .logo {
     width: 80px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
-.buttons .btn {
+.buttons .button {
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
-    background: #00aaff;
+    background-color: #009dff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
-.why-box {
+.neden {
+    background-color: #333;
     margin-top: 30px;
-    background: #444;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 10px;
 }
 footer {
-    margin-top: 20px;
-}
-footer a {
-    color: #00aaff;
-    text-decoration: none;
+    margin-top: 30px;
 }

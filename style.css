@@ -2,12 +2,12 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: url('https://images.unsplash.com/photo-1629236717881-7b23b14a3d9e?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+  background: url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
 }
 .container {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.7);
   padding: 40px;
   margin: 5% auto;
   max-width: 760px;
@@ -84,4 +84,15 @@ footer a {
 }
 footer a:hover {
   text-decoration: underline;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+input, textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
 }

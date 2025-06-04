@@ -2,47 +2,85 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>EnesLearn - Yapay Zeka Destekli İngilizce</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EnesLearn - Giriş</title>
+    <link rel="icon" href="logo.png" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+        .language-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .container {
+            margin-top: 150px;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .title {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .auth-buttons {
+            margin-top: 30px;
+        }
+        .auth-buttons button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .why-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 12px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+    </style>
 </head>
-<body style="background-image: url('background.jpg'); background-size: cover; background-position: center;">
-    <div class="container">
-        <img src="logo.png" alt="EnesLearn Logo" class="logo">
-        <h1>EnesLearn</h1>
-        <p>Yapay zekâ destekli İngilizce öğrenme platformu</p>
-        <h2>İngilizce öğrenmeye hemen başla!</h2>
-        <p>Kişiselleştirilmiş içerikler, interaktif oyunlar ve seviye analizi seni bekliyor.</p>
-        <div class="buttons">
-            <a href="#">Giriş Yap</a>
-            <a href="#">Üye Ol</a>
-            <a href="#">Ana Sayfa</a>
-            <a href="#">İletişim</a>
-        </div>
-        <div class="neden-box" onclick="toggleNeden()">
-            Neden EnesLearn?
-        </div>
-        <div id="neden" class="neden-content">
-            <strong>EnesLearn</strong>, klasik eğitim kalıplarının dışına çıkar. Yapay zekâyla seviyeni analiz eder, eksiklerini belirler ve sana özel bir öğrenme planı oluşturur. Gerçekten öğrenmeni sağlayacak, oyunlaştırılmış içerikler ve Türkçe destekli açıklamalarla dolu bir sistem sunar.
-        </div>
-        <footer>
-            <a href="legal.html">© 2025 EnesLearn. Tüm Hakları Saklıdır</a>
-        </footer>
+<body>
+    <div class="language-toggle">
+        <button>TR</button>
+        <button>EN</button>
     </div>
-    <div class="language-switch">
-        <button onclick="switchLanguage('tr')">TR</button>
-        <button onclick="switchLanguage('en')">EN</button>
-    </div>
-<script>
-    function toggleNeden() {
-        const box = document.getElementById("neden");
-        box.style.display = box.style.display === "block" ? "none" : "block";
-    }
 
-    function switchLanguage(lang) {
-        alert("Dil değiştirildi: " + lang);
-    }
-</script>
+    <div class="container">
+        <img src="logo.png" alt="EnesLearn Logo" class="logo"/>
+        <div class="title">EnesLearn'e Hoş Geldiniz</div>
+        <div class="auth-buttons">
+            <button>Google ile Giriş</button>
+            <button>Apple ile Giriş</button>
+            <button>Facebook ile Giriş</button>
+            <button>Outlook ile Giriş</button>
+        </div>
+    </div>
+
+    <div class="why-box" onclick="alert('EnesLearn, yapay zekâ destekli özel içerikler, seviye tespiti ve günlük gelişimi destekleyen araçlarla size İngilizceyi en etkili şekilde öğretir.')">
+        Neden EnesLearn?
+    </div>
+
+    <footer>
+        <a href="#" style="color: white; text-decoration: none;">© 2025 EnesLearn. Tüm Hakları Saklıdır.</a>
+    </footer>
 </body>
 </html>

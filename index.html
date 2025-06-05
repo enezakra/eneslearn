@@ -4,39 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <title>EnesLearn</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="lang-switch">
+    <div class="language-selector">
         <button onclick="setLanguage('tr')">TR</button>
         <button onclick="setLanguage('en')">EN</button>
     </div>
-    <div class="container">
-        <img src="logo.png" alt="EnesLearn Logo" class="logo">
+    <div class="main-container">
+        <img src="assets/logo.png" alt="Logo" class="logo">
         <h1 id="welcome">EnesLearn'e Hoş Geldiniz</h1>
         <p id="tagline">Yapay zeka destekli İngilizce öğrenme platformu</p>
-        <div class="buttons">
-            <button onclick="alert('Giriş Yap')">Giriş Yap</button>
-            <button onclick="alert('Üye Ol')">Üye Ol</button>
-            <button onclick="alert('Google')">Google</button>
-            <button onclick="alert('Apple')">Apple</button>
-            <button onclick="alert('Facebook')">Facebook</button>
-            <button onclick="alert('Outlook')">Outlook</button>
+        <div class="login-buttons">
+            <button onclick="alert('Giriş')">Giriş Yap</button>
+            <button onclick="alert('Üyelik')">Üye Ol</button>
+            <div class="social-login">
+                <button onclick="toggleSocial()">Diğer Giriş Yöntemleri</button>
+                <div id="social-options" class="hidden">
+                    <button onclick="alert('Google')">Google</button>
+                    <button onclick="alert('Facebook')">Facebook</button>
+                    <button onclick="alert('Apple')">Apple</button>
+                    <button onclick="alert('Outlook')">Outlook</button>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="why-button" onclick="toggleWhy()">Neden EnesLearn?</div>
+    <div class="why" onclick="toggleWhy()">Neden EnesLearn?</div>
     <div class="why-text" id="whyText">
-        <strong>EnesLearn, klasik eğitim yöntemlerini aşan bir sistemdir.</strong><br>
-        Yapay zeka destekli analizlerle seviyeni tespit eder, eksiklerini belirler ve sana özel içerikler sunar. 
-        Gerçekten öğrenmeni sağlayacak oyunlaştırılmış modüller ve Türkçe destekli açıklamalarla donatılmıştır.
+        <strong>EnesLearn klasik yöntemlerin dışına çıkar.</strong><br>
+        Yapay zekâ seviyeni analiz eder, eksiklerini belirler, sana özel içerikler sunar.
+        Oyunlaştırılmış modüller ve Türkçe açıklamalarla öğrenmeyi kolaylaştırır.
     </div>
-
     <div class="footer">
-        © 2025 EnesLearn. Tüm Hakları Saklıdır. | <a href="terms.html">Kullanım Şartları</a> | <a href="privacy.html">Gizlilik Politikası</a> | <a href="cookies.html">Çerezler</a>
+        © 2025 EnesLearn. Tüm Hakları Saklıdır. |
+        <a href="terms.html">Kullanım Şartları</a> |
+        <a href="privacy.html">Gizlilik Politikası</a> |
+        <a href="cookies.html">Çerezler</a>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

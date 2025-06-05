@@ -1,10 +1,22 @@
 
 function toggleWhy() {
-    var x = document.getElementById("whyText");
-    x.style.display = (x.style.display === "block") ? "none" : "block";
+    const why = document.getElementById("whyText");
+    if (why.style.display === "block") {
+        why.style.display = "none";
+    } else {
+        why.style.display = "block";
+    }
+}
+function toggleSocial() {
+    const social = document.getElementById("social-options");
+    if (social.classList.contains("hidden")) {
+        social.classList.remove("hidden");
+    } else {
+        social.classList.add("hidden");
+    }
 }
 function setLanguage(lang) {
-    if(lang === "en") {
+    if (lang === "en") {
         document.getElementById("welcome").innerText = "Welcome to EnesLearn";
         document.getElementById("tagline").innerText = "AI-powered English learning platform";
     } else {

@@ -2,21 +2,20 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('background.png');
+    background-image: url('assets/background.png');
     background-size: cover;
     background-position: center;
     color: white;
 }
-.lang-switch {
+.language-selector {
     position: absolute;
     top: 10px;
     right: 10px;
 }
-.lang-switch button {
+.language-selector button {
     margin-left: 5px;
-    padding: 5px 10px;
 }
-.container {
+.main-container {
     text-align: center;
     margin-top: 15vh;
     background-color: rgba(0, 0, 0, 0.6);
@@ -25,29 +24,27 @@ body {
     display: inline-block;
 }
 .logo {
-    width: 100px;
+    width: 80px;
 }
-.buttons button {
+.login-buttons button {
     margin: 10px;
     padding: 10px 20px;
     background-color: #00aaff;
-    color: white;
     border: none;
     border-radius: 5px;
+    color: white;
+    font-weight: bold;
     cursor: pointer;
 }
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(0,0,0,0.7);
-    text-align: center;
-    padding: 10px;
-    font-size: 0.9em;
+.social-login {
+    margin-top: 10px;
 }
-.why-button {
+#social-options.hidden {
+    display: none;
+}
+.why {
     position: fixed;
-    bottom: 20px;
+    bottom: 15px;
     right: 20px;
     background-color: #0077cc;
     padding: 10px;
@@ -63,4 +60,17 @@ body {
     background-color: #222;
     padding: 15px;
     border-radius: 8px;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    font-size: 0.9em;
+}
+.footer a {
+    color: #b3b3ff;
+    margin: 0 10px;
 }

@@ -3,7 +3,6 @@ function toggleWhy() {
     var x = document.getElementById("whyText");
     x.style.display = (x.style.display === "block") ? "none" : "block";
 }
-
 function setLanguage(lang) {
     if(lang === "en") {
         document.getElementById("welcome").innerText = "Welcome to EnesLearn";

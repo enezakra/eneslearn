@@ -4,17 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>EnesLearn</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-image: url('background.png');
             background-size: cover;
-            background-repeat: no-repeat;
             background-position: center;
             color: white;
-            overflow-x: hidden;
         }
         .lang-switch {
             position: absolute;
@@ -30,35 +28,24 @@
             top: 10px;
             right: 10px;
             background-color: #0077cc;
-            color: white;
-            border: none;
-            padding: 8px 12px;
+            padding: 10px;
             border-radius: 5px;
-            cursor: pointer;
+            color: white;
+            text-decoration: none;
         }
         .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90vh;
             text-align: center;
-        }
-        .panel {
+            margin-top: 20vh;
             background-color: rgba(0, 0, 0, 0.6);
-            padding: 30px;
+            padding: 40px;
             border-radius: 10px;
             display: inline-block;
         }
         .logo {
-            width: 80px;
-            margin-bottom: 10px;
-        }
-        h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
+            width: 100px;
         }
         .buttons button {
-            margin: 10px 5px;
+            margin: 10px;
             padding: 10px 20px;
             background-color: #00aaff;
             color: white;
@@ -70,14 +57,14 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0,0,0,0.7);
             text-align: center;
             padding: 10px;
             font-size: 0.9em;
         }
         .footer a {
-            color: #bbb;
-            margin: 0 5px;
+            color: #ccc;
+            margin: 0 10px;
             text-decoration: none;
         }
         .why-button {
@@ -94,7 +81,7 @@
             position: fixed;
             bottom: 70px;
             right: 20px;
-            width: 320px;
+            width: 300px;
             background-color: #222;
             padding: 15px;
             border-radius: 8px;
@@ -106,28 +93,29 @@
         <button onclick="setLanguage('tr')">TR</button>
         <button onclick="setLanguage('en')">EN</button>
     </div>
-    <a class="contact-button" href="mailto:admin@eneslearn.com">Bizimle İletişime Geç</a>
+    <a href="mailto:destek@eneslearn.com" class="contact-button">Bizimle İletişime Geç</a>
+
     <div class="container">
-        <div class="panel">
-            <img src="logo.png" alt="EnesLearn Logo" class="logo">
-            <h1 id="welcome">EnesLearn'e Hoş Geldiniz</h1>
-            <p id="tagline">Yapay zeka destekli İngilizce öğrenme platformu</p>
-            <div class="buttons">
-                <button onclick="alert('Giriş Yap')">Giriş Yap</button>
-                <button onclick="alert('Üye Ol')">Üye Ol</button>
-                <button onclick="alert('Google / Apple / Facebook / Outlook')">Diğer Giriş Yöntemleri</button>
-            </div>
+        <img src="logo.png" alt="EnesLearn Logo" class="logo">
+        <h1 id="welcome">EnesLearn'e Hoş Geldiniz</h1>
+        <p id="tagline">Yapay zeka destekli İngilizce öğrenme platformu</p>
+        <div class="buttons">
+            <button onclick="alert('Giriş Yap')">Giriş Yap</button>
+            <button onclick="alert('Üye Ol')">Üye Ol</button>
+            <button onclick="alert('Diğer Yöntemler')">Diğer Giriş Yöntemleri</button>
         </div>
     </div>
 
     <div class="why-button" onclick="toggleWhy()">Neden EnesLearn?</div>
     <div class="why-text" id="whyText">
-        <strong>EnesLearn nedir ve neden tercih edilmelidir?</strong><br>
-        EnesLearn, öğrenme sürecinizi daha verimli ve kişiselleştirilmiş hale getirmek için yapay zeka teknolojisiyle geliştirilmiş bir eğitim platformudur. Her seviyeye uygun içerikler, ilerlemenizi takip eden akıllı sistemler ve eğlenceli bir öğrenme deneyimi sunar. Gerçek başarı için doğru araçlarla tanışın.
+        EnesLearn, kişiselleştirilmiş öğrenme deneyimi sunar. Yapay zekâ ile desteklenen sistemimiz sayesinde her kullanıcıya özel içerikler sunulur. Gelişim sürecinizi analiz eder, eksiklerinizi tespit eder ve hedefe yönelik çalışmanızı sağlar. Elde edilen verilerle öğrenme süreci etkili hale gelir.
     </div>
 
     <div class="footer">
-        © 2025 EnesLearn. Tüm Hakları Saklıdır. | <a href="#">Kullanım Şartları</a> | <a href="#">Gizlilik Politikası</a> | <a href="#">Çerezler</a>
+        © 2025 EnesLearn. Tüm Hakları Saklıdır.
+        | <a href="legal/terms.html" target="_blank">Kullanım Şartları</a>
+        | <a href="legal/privacy.html" target="_blank">Gizlilik Politikası</a>
+        | <a href="legal/cookies.html" target="_blank">Çerezler</a>
     </div>
 
     <script>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -13,39 +14,27 @@
             background-position: center;
             color: white;
         }
-        .lang-switch {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        .lang-switch button {
-            margin-left: 5px;
-            padding: 5px 10px;
-        }
         .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 40px;
-            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.4);
             text-align: center;
-            width: 90%;
-            max-width: 450px;
         }
         .logo {
-            width: 90px;
-            margin-bottom: 15px;
+            width: 100px;
+            margin-bottom: 20px;
         }
         .buttons button {
             margin: 10px;
-            padding: 12px 25px;
-            font-size: 16px;
+            padding: 10px 20px;
+            font-weight: bold;
             background-color: #00aaff;
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 5px;
             cursor: pointer;
         }
         .footer {
@@ -57,75 +46,21 @@
             padding: 10px;
             font-size: 0.9em;
         }
-        .footer a {
-            color: #ccc;
-            margin: 0 8px;
-            text-decoration: none;
-        }
-        .why-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #0077cc;
-            padding: 12px;
-            border-radius: 8px;
-            cursor: pointer;
-            color: white;
-        }
-        .why-text {
-            display: none;
-            position: fixed;
-            bottom: 70px;
-            right: 20px;
-            width: 300px;
-            background-color: #222;
-            padding: 15px;
-            border-radius: 8px;
-        }
     </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <button onclick="setLanguage('tr')">TR</button>
-        <button onclick="setLanguage('en')">EN</button>
-    </div>
-
     <div class="container">
-        <img src="favicon.ico" alt="Logo" class="logo">
-        <h1 id="welcome">EnesLearn'e Hoş Geldiniz</h1>
-        <p id="tagline">Yapay zeka destekli İngilizce öğrenme platformu</p>
+        <img src="logo.png" alt="EnesLearn Logo" class="logo">
+        <h1>EnesLearn'e Hoş Geldiniz</h1>
+        <p>Yapay zeka destekli İngilizce öğrenme platformu</p>
         <div class="buttons">
-            <button onclick="alert('Giriş ekranına yönlendiriliyor...')">Giriş Yap</button>
-            <button onclick="alert('Kayıt ekranına yönlendiriliyor...')">Üye Ol</button>
-            <button onclick="alert('Google, Apple, Facebook veya Outlook ile giriş seçenekleri burada görünecek.')">Diğer Giriş Yöntemleri</button>
+            <button>Giriş Yap</button>
+            <button>Üye Ol</button>
+            <button onclick="alert('Google / Facebook / Apple / Outlook ile giriş seçenekleri gösterilecek')">Diğer Giriş Yöntemleri</button>
         </div>
     </div>
-
-    <div class="why-button" onclick="toggleWhy()">Neden EnesLearn?</div>
-    <div class="why-text" id="whyText">
-        <strong>EnesLearn, klasik yöntemlerin ötesinde bir öğrenme deneyimi sunar.</strong><br>
-        Yapay zekâ ile desteklenen altyapısı sayesinde seviyenizi analiz eder, kişiye özel içerik sunar ve gerçek gelişim sağlar. Eğlenceli, etkili ve tamamen özelleştirilebilir bir İngilizce öğrenme deneyimi sizi bekliyor.
-    </div>
-
     <div class="footer">
         © 2025 EnesLearn. Tüm Hakları Saklıdır. | <a href="#">Kullanım Şartları</a> | <a href="#">Gizlilik Politikası</a> | <a href="#">Çerezler</a>
     </div>
-
-    <script>
-        function toggleWhy() {
-            var x = document.getElementById("whyText");
-            x.style.display = (x.style.display === "block") ? "none" : "block";
-        }
-
-        function setLanguage(lang) {
-            if(lang === "en") {
-                document.getElementById("welcome").innerText = "Welcome to EnesLearn";
-                document.getElementById("tagline").innerText = "AI-powered English learning platform";
-            } else {
-                document.getElementById("welcome").innerText = "EnesLearn'e Hoş Geldiniz";
-                document.getElementById("tagline").innerText = "Yapay zeka destekli İngilizce öğrenme platformu";
-            }
-        }
-    </script>
 </body>
 </html>

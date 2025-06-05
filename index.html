@@ -2,115 +2,127 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>EnesLearn</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: url('background.png') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-            text-align: center;
-        }
-        .lang-switch {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        .lang-switch button {
-            margin: 0 5px;
-        }
-        .login-container {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 40px;
-            border-radius: 12px;
-            display: inline-block;
-            margin-top: 15vh;
-        }
-        .login-container img {
-            width: 80px;
-            margin-bottom: 20px;
-        }
-        .login-container h1 {
-            font-size: 2.5em;
-            margin: 10px 0;
-        }
-        .login-container p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-        .login-container button {
-            margin: 5px;
-            padding: 10px 20px;
-            font-size: 1em;
-            border: none;
-            border-radius: 6px;
-            background-color: #007BFF;
-            color: white;
-            cursor: pointer;
-        }
-        .why {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #007BFF;
-            color: white;
-            padding: 10px;
-            border-radius: 10px;
-            max-width: 280px;
-        }
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-size: 0.9em;
-            background-color: rgba(0,0,0,0.5);
-            padding: 10px;
-        }
-        footer a {
-            color: #ccc;
-            margin: 0 5px;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>EnesLearn</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('background.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .lang-switch button {
+      margin-left: 5px;
+      padding: 5px 10px;
+    }
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .logo {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+    .buttons button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #00aaff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+    }
+    .why-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0077cc;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .why-text {
+      display: none;
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      width: 300px;
+      background-color: #222;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    a { color: #fff; text-decoration: underline; margin: 0 5px; }
+  </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <button onclick="setLanguage('tr')">TR</button>
-        <button onclick="setLanguage('en')">EN</button>
+  <div class="lang-switch">
+    <button onclick="setLanguage('tr')">TR</button>
+    <button onclick="setLanguage('en')">EN</button>
+  </div>
+
+  <div class="container">
+    <img src="logo.png" alt="EnesLearn Logo" class="logo" />
+    <h1 id="welcome">EnesLearn'e Hoş Geldiniz</h1>
+    <p id="tagline">Yapay zeka destekli İngilizce öğrenme platformu</p>
+    <div class="buttons">
+      <button onclick="alert('Giriş yapılacak')">Giriş Yap</button>
+      <button onclick="alert('Üyelik oluşturulacak')">Üye Ol</button>
+      <button onclick="alert('Google, Apple, Facebook gibi girişler açılacak')">Diğer Giriş Yöntemleri</button>
     </div>
-    <div class="login-container">
-        <img src="favicon.ico" alt="Logo">
-        <h1 id="welcome">EnesLearn'e Hoş Geldiniz</h1>
-        <p id="tagline">Yapay zeka destekli İngilizce öğrenme platformu</p>
-        <div>
-            <button onclick="alert('Giriş Yap')">Giriş Yap</button>
-            <button onclick="alert('Üye Ol')">Üye Ol</button>
-            <button onclick="alert('Diğer Yöntemler')">Diğer Giriş Yöntemleri</button>
-        </div>
-    </div>
-    <div class="why">
-        <strong>Neden EnesLearn?</strong><br>
-        Yapay zekayla desteklenen bu platform, kişiselleştirilmiş içerikler ve seviye analizleriyle gerçek öğrenme sunar. Hemen başla!
-    </div>
-    <footer>
-        © 2025 EnesLearn. Tüm Hakları Saklıdır. |
-        <a href="#">Kullanım Şartları</a> |
-        <a href="#">Gizlilik Politikası</a> |
-        <a href="#">Çerezler</a>
-    </footer>
-    <script>
-        function setLanguage(lang) {
-            if(lang === "en") {
-                document.getElementById("welcome").innerText = "Welcome to EnesLearn";
-                document.getElementById("tagline").innerText = "AI-powered English learning platform";
-            } else {
-                document.getElementById("welcome").innerText = "EnesLearn'e Hoş Geldiniz";
-                document.getElementById("tagline").innerText = "Yapay zeka destekli İngilizce öğrenme platformu";
-            }
-        }
-    </script>
+  </div>
+
+  <div class="why-button" onclick="toggleWhy()">Neden EnesLearn?</div>
+  <div class="why-text" id="whyText">
+    <strong>EnesLearn klasik eğitim kalıplarının dışına çıkar.</strong><br>
+    Yapay zeka destekli sistemimizle seviyen analiz edilir, eksik olduğun konular tespit edilir. 
+    Sana özel oyunlaştırılmış içerikler sunulur ve öğrenme süreci daha keyifli hale gelir.
+  </div>
+
+  <div class="footer">
+    © 2025 EnesLearn. Tüm Hakları Saklıdır. |
+    <a href="#">Kullanım Şartları</a> |
+    <a href="#">Gizlilik Politikası</a> |
+    <a href="#">Çerezler</a>
+  </div>
+
+  <script>
+    function toggleWhy() {
+      var x = document.getElementById("whyText");
+      x.style.display = x.style.display === "block" ? "none" : "block";
+    }
+
+    function setLanguage(lang) {
+      if(lang === "en") {
+        document.getElementById("welcome").innerText = "Welcome to EnesLearn";
+        document.getElementById("tagline").innerText = "AI-powered English learning platform";
+      } else {
+        document.getElementById("welcome").innerText = "EnesLearn'e Hoş Geldiniz";
+        document.getElementById("tagline").innerText = "Yapay zeka destekli İngilizce öğrenme platformu";
+      }
+    }
+  </script>
 </body>
 </html>

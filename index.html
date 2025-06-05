@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -18,58 +19,56 @@
             top: 10px;
             right: 10px;
         }
-        .lang-switch button {
-            margin-left: 5px;
-            padding: 5px 10px;
-        }
         .container {
-            text-align: center;
-            margin: 15vh auto 0;
-            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.5);
             padding: 30px;
-            border-radius: 10px;
-            width: 420px;
+            border-radius: 12px;
+            margin: auto;
+            width: fit-content;
         }
         .logo {
             width: 100px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .buttons {
+            margin-top: 20px;
         }
         .buttons button {
-            margin: 10px 5px;
+            margin: 5px;
             padding: 10px 20px;
-            background-color: #00aaff;
-            color: white;
+            background-color: #007bff;
             border: none;
+            color: white;
             border-radius: 5px;
             cursor: pointer;
         }
-        .footer {
+        footer {
             position: fixed;
             bottom: 0;
+            background-color: rgba(0,0,0,0.8);
             width: 100%;
-            background-color: rgba(0,0,0,0.7);
             text-align: center;
             padding: 10px;
-            font-size: 0.9em;
+            font-size: 14px;
         }
         .why-button {
             position: fixed;
-            bottom: 20px;
+            bottom: 60px;
             right: 20px;
-            background-color: #0077cc;
+            background-color: #007bff;
             padding: 10px;
             border-radius: 8px;
-            cursor: pointer;
             color: white;
-        }
-        .why-text {
-            display: none;
-            position: fixed;
-            bottom: 70px;
-            right: 20px;
-            width: 300px;
-            background-color: #222;
-            padding: 15px;
-            border-radius: 8px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -85,29 +84,14 @@
         <div class="buttons">
             <button onclick="alert('Giriş Yap')">Giriş Yap</button>
             <button onclick="alert('Üye Ol')">Üye Ol</button>
-            <button onclick="alert('Diğer Yöntemler')">Diğer Giriş Yöntemleri</button>
+            <button onclick="alert('Giriş Seçenekleri')">Diğer Giriş Yöntemleri</button>
         </div>
     </div>
-
-    <div class="why-button" onclick="toggleWhy()">Neden EnesLearn?</div>
-    <div class="why-text" id="whyText">
-        <strong>EnesLearn ile farkı hissedin!</strong><br>
-        Seviyene göre kişiselleştirilmiş içerikler, etkileşimli egzersizler ve oyunlaştırılmış eğitim modülleri ile öğrenmeyi keyifli hale getiriyoruz.
-    </div>
-
-    <div class="footer">
-        © 2025 EnesLearn. Tüm Hakları Saklıdır. |
-        <a href="#">Kullanım Şartları</a> |
-        <a href="#">Gizlilik Politikası</a> |
-        <a href="#">Çerezler</a>
-    </div>
-
+    <div class="why-button" onclick="alert('Neden EnesLearn? EnesLearn, kişiye özel içerik ve yapay zeka destekli öğrenme deneyimi sunar.')">Neden EnesLearn?</div>
+    <footer>
+        © 2025 EnesLearn. Tüm Hakları Saklıdır. | <a href="#">Kullanım Şartları</a> | <a href="#">Gizlilik Politikası</a> | <a href="#">Çerezler</a>
+    </footer>
     <script>
-        function toggleWhy() {
-            var x = document.getElementById("whyText");
-            x.style.display = (x.style.display === "block") ? "none" : "block";
-        }
-
         function setLanguage(lang) {
             if(lang === "en") {
                 document.getElementById("welcome").innerText = "Welcome to EnesLearn";

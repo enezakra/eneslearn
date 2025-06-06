@@ -32,9 +32,10 @@
         }
         .main-content {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: calc(100vh - 200px);
             text-align: center;
         }
         .buttons {
@@ -51,26 +52,24 @@
             background-color: #007bff;
             color: #fff;
         }
-        .contact {
-            position: absolute;
-            bottom: 80px;
-            right: 20px;
-            text-align: right;
-        }
-        .contact a {
-            display: block;
-            color: #8eb6f5;
-            text-decoration: none;
-            margin-bottom: 5px;
-        }
         .footer {
-            position: relative;
-            background-color: #000;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
             text-align: center;
-            padding: 60px 10px 20px;
+            padding: 20px 10px;
         }
-        .footer a {
+        .footer .contact-links {
+            margin-bottom: 10px;
+        }
+        .footer .contact-links a {
+            color: #8eb6f5;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer .legal-links a {
             color: #8eb6f5;
             text-decoration: none;
             margin: 0 10px;
@@ -137,49 +136,40 @@
         </select>
     </div>
     <div class="main-content">
-        <div>
-            <h1 class="lang-tr">EnesLearn</h1>
-            <h1 class="lang-en">EnesLearn</h1>
-            <h1 class="lang-es">EnesLearn</h1>
-            <h1 class="lang-fr">EnesLearn</h1>
-            <h1 class="lang-de">EnesLearn</h1>
-            <div class="buttons">
-                <button class="lang-tr">Giriş</button>
-                <button class="lang-tr">Üye Ol</button>
-                <button class="lang-en">Login</button>
-                <button class="lang-en">Register</button>
-                <button class="lang-es">Iniciar Sesión</button>
-                <button class="lang-es">Registrarse</button>
-                <button class="lang-fr">Connexion</button>
-                <button class="lang-fr">Inscription</button>
-                <button class="lang-de">Anmelden</button>
-                <button class="lang-de">Registrieren</button>
-            </div>
+        <h1 class="lang-tr">EnesLearn</h1>
+        <h1 class="lang-en">EnesLearn</h1>
+        <h1 class="lang-es">EnesLearn</h1>
+        <h1 class="lang-fr">EnesLearn</h1>
+        <h1 class="lang-de">EnesLearn</h1>
+        <div class="buttons">
+            <button class="lang-tr">Giriş</button>
+            <button class="lang-tr">Üye Ol</button>
+            <button class="lang-en">Login</button>
+            <button class="lang-en">Register</button>
+            <button class="lang-es">Iniciar Sesión</button>
+            <button class="lang-es">Registrarse</button>
+            <button class="lang-fr">Connexion</button>
+            <button class="lang-fr">Inscription</button>
+            <button class="lang-de">Anmelden</button>
+            <button class="lang-de">Registrieren</button>
         </div>
     </div>
-    <div class="contact">
-        <a href="mailto:eneslearn.setup@gmail.com" class="lang-tr">Bizimle İletişime Geç</a>
-        <a href="mailto:eneslearn.setup@gmail.com" class="lang-en">Contact Us</a>
-        <a href="mailto:eneslearn.setup@gmail.com" class="lang-es">Contáctanos</a>
-        <a href="mailto:eneslearn.setup@gmail.com" class="lang-fr">Contactez-nous</a>
-        <a href="mailto:eneslearn.setup@gmail.com" class="lang-de">Kontakt</a>
-    </div>
     <div class="footer">
-        <button id="nedenButton">
+        <div class="contact-links">
+            <a href="mailto:eneslearn.setup@gmail.com" class="lang-tr">Bizimle İletişime Geç</a>
+            <a href="mailto:eneslearn.setup@gmail.com" class="lang-en">Contact Us</a>
+            <a href="mailto:eneslearn.setup@gmail.com" class="lang-es">Contáctanos</a>
+            <a href="mailto:eneslearn.setup@gmail.com" class="lang-fr">Contactez-nous</a>
+            <a href="mailto:eneslearn.setup@gmail.com" class="lang-de">Kontakt</a>
+        </div>
+        <div id="nedenButton">
             <span class="lang-tr">Neden EnesLearn?</span>
             <span class="lang-en">Why EnesLearn?</span>
             <span class="lang-es">Por Qué EnesLearn?</span>
             <span class="lang-fr">Pourquoi EnesLearn?</span>
             <span class="lang-de">Warum EnesLearn?</span>
-        </button>
-        <p>
-            <span class="lang-tr">© 2025 EnesLearn. Tüm Hakları Saklıdır.</span>
-            <span class="lang-en">© 2025 EnesLearn. All Rights Reserved.</span>
-            <span class="lang-es">© 2025 EnesLearn. Todos los Derechos Reservados.</span>
-            <span class="lang-fr">© 2025 EnesLearn. Tous Droits Réservés.</span>
-            <span class="lang-de">© 2025 EnesLearn. Alle Rechte Vorbehalten.</span>
-        </p>
-        <p>
+        </div>
+        <div class="legal-links">
             <a id="termsLink" class="lang-tr">Kullanım Şartları</a>
             <a id="privacyLink" class="lang-tr">Gizlilik Politikası</a>
             <a id="cookiesLink" class="lang-tr">Çerezler</a>
@@ -195,6 +185,13 @@
             <a id="termsLinkDe" class="lang-de">Nutzungsbedingungen</a>
             <a id="privacyLinkDe" class="lang-de">Datenschutzrichtlinie</a>
             <a id="cookiesLinkDe" class="lang-de">Cookies</a>
+        </div>
+        <p>
+            <span class="lang-tr">© 2025 EnesLearn. Tüm Hakları Saklıdır.</span>
+            <span class="lang-en">© 2025 EnesLearn. All Rights Reserved.</span>
+            <span class="lang-es">© 2025 EnesLearn. Todos los Derechos Reservados.</span>
+            <span class="lang-fr">© 2025 EnesLearn. Tous Droits Réservés.</span>
+            <span class="lang-de">© 2025 EnesLearn. Alle Rechte Vorbehalten.</span>
         </p>
     </div>
 
@@ -236,53 +233,28 @@
             setLanguage(e.target.value);
         });
 
-        // Click handlers for footer links to show alert notifications
+        // Click handlers for footer legal links to show alert notifications
         const showNotification = (msg) => { alert(msg); };
 
-        document.getElementById('termsLink').addEventListener('click', () => {
-            showNotification('Kullanım Şartları içeriği yakında eklenecek.');
-        });
-        document.getElementById('privacyLink').addEventListener('click', () => {
-            showNotification('Gizlilik Politikası içeriği yakında eklenecek.');
-        });
-        document.getElementById('cookiesLink').addEventListener('click', () => {
-            showNotification('Çerez Politikası içeriği yakında eklenecek.');
-        });
-        document.getElementById('termsLinkEn').addEventListener('click', () => {
-            showNotification('Terms of Service content coming soon.');
-        });
-        document.getElementById('privacyLinkEn').addEventListener('click', () => {
-            showNotification('Privacy Policy content coming soon.');
-        });
-        document.getElementById('cookiesLinkEn').addEventListener('click', () => {
-            showNotification('Cookies policy content coming soon.');
-        });
-        document.getElementById('termsLinkEs').addEventListener('click', () => {
-            showNotification('Términos de Servicio pronto disponibles.');
-        });
-        document.getElementById('privacyLinkEs').addEventListener('click', () => {
-            showNotification('Política de Privacidad pronto disponible.');
-        });
-        document.getElementById('cookiesLinkEs').addEventListener('click', () => {
-            showNotification('Política de Cookies pronto disponible.');
-        });
-        document.getElementById('termsLinkFr').addEventListener('click', () => {
-            showNotification('Conditions d'Utilisation bientôt disponibles.');
-        });
-        document.getElementById('privacyLinkFr').addEventListener('click', () => {
-            showNotification('Politique de Confidentialité bientôt disponible.');
-        });
-        document.getElementById('cookiesLinkFr').addEventListener('click', () => {
-            showNotification('Politique de Cookies bientôt disponible.');
-        });
-        document.getElementById('termsLinkDe').addEventListener('click', () => {
-            showNotification('Nutzungsbedingungen bald verfügbar.');
-        });
-        document.getElementById('privacyLinkDe').addEventListener('click', () => {
-            showNotification('Datenschutzrichtlinie bald verfügbar.');
-        });
-        document.getElementById('cookiesLinkDe').addEventListener('click', () => {
-            showNotification('Cookies-Richtlinie bald verfügbar.');
+        const legalIds = [
+            ['termsLink', 'Kullanım Şartları içeriği yakında eklenecek.'],
+            ['privacyLink', 'Gizlilik Politikası içeriği yakında eklenecek.'],
+            ['cookiesLink', 'Çerez Politikası içeriği yakında eklenecek.'],
+            ['termsLinkEn', 'Terms of Service content coming soon.'],
+            ['privacyLinkEn', 'Privacy Policy content coming soon.'],
+            ['cookiesLinkEn', 'Cookies policy content coming soon.'],
+            ['termsLinkEs', 'Términos de Servicio pronto disponibles.'],
+            ['privacyLinkEs', 'Política de Privacidad pronto disponible.'],
+            ['cookiesLinkEs', 'Política de Cookies pronto disponible.'],
+            ['termsLinkFr', "Conditions d'Utilisation bientôt disponibles."],
+            ['privacyLinkFr', "Politique de Confidentialité bientôt disponible."],
+            ['cookiesLinkFr', "Politique de Cookies bientôt disponible."],
+            ['termsLinkDe', 'Nutzungsbedingungen bald verfügbar.'],
+            ['privacyLinkDe', 'Datenschutzrichtlinie bald verfügbar.'],
+            ['cookiesLinkDe', 'Cookies-Richtlinie bald verfügbar.']
+        ];
+        legalIds.forEach(([id, msg]) => {
+            document.getElementById(id).addEventListener('click', () => showNotification(msg));
         });
 
         // Handle Neden EnesLearn? modal

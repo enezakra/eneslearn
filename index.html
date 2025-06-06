@@ -57,11 +57,11 @@
             right: 20px;
             text-align: right;
         }
-        .contact a, .contact span {
+        .contact a {
             display: block;
-            margin-bottom: 5px;
             color: #8eb6f5;
             text-decoration: none;
+            margin-bottom: 5px;
         }
         .footer {
             position: relative;
@@ -74,6 +74,7 @@
             color: #8eb6f5;
             text-decoration: none;
             margin: 0 10px;
+            cursor: pointer;
         }
         #nedenButton {
             position: absolute;
@@ -86,6 +87,38 @@
             border-radius: 5px;
             cursor: pointer;
             z-index: 1000;
+        }
+        /* Modal styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+        .modal-content {
+            background: #fff;
+            color: #000;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: left;
+            max-height: 80%;
+            overflow-y: auto;
+        }
+        .modal-content h2 {
+            margin-top: 0;
+        }
+        .modal-close {
+            float: right;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: -10px;
         }
         .lang-tr, .lang-en, .lang-es, .lang-fr, .lang-de { display: none; }
     </style>
@@ -130,11 +163,6 @@
         <a href="mailto:eneslearn.setup@gmail.com" class="lang-es">Contáctanos</a>
         <a href="mailto:eneslearn.setup@gmail.com" class="lang-fr">Contactez-nous</a>
         <a href="mailto:eneslearn.setup@gmail.com" class="lang-de">Kontakt</a>
-        <span class="lang-tr">Telefon: +90 555 123 4567</span>
-        <span class="lang-en">Phone: +90 555 123 4567</span>
-        <span class="lang-es">Teléfono: +90 555 123 4567</span>
-        <span class="lang-fr">Téléphone: +90 555 123 4567</span>
-        <span class="lang-de">Telefon: +90 555 123 4567</span>
     </div>
     <div class="footer">
         <button id="nedenButton">
@@ -152,22 +180,41 @@
             <span class="lang-de">© 2025 EnesLearn. Alle Rechte Vorbehalten.</span>
         </p>
         <p>
-            <a href="https://example.com/legal" target="_blank" class="lang-tr">Kullanım Şartları</a>
-            <a href="https://example.com/privacy" target="_blank" class="lang-tr">Gizlilik Politikası</a>
-            <a href="https://example.com/cookies" target="_blank" class="lang-tr">Çerezler</a>
-            <a href="https://example.com/legal" target="_blank" class="lang-en">Terms of Service</a>
-            <a href="https://example.com/privacy" target="_blank" class="lang-en">Privacy Policy</a>
-            <a href="https://example.com/cookies" target="_blank" class="lang-en">Cookies</a>
-            <a href="https://example.com/legal" target="_blank" class="lang-es">Términos de Servicio</a>
-            <a href="https://example.com/privacy" target="_blank" class="lang-es">Política de Privacidad</a>
-            <a href="https://example.com/cookies" target="_blank" class="lang-es">Cookies</a>
-            <a href="https://example.com/legal" target="_blank" class="lang-fr">Conditions d'Utilisation</a>
-            <a href="https://example.com/privacy" target="_blank" class="lang-fr">Politique de Confidentialité</a>
-            <a href="https://example.com/cookies" target="_blank" class="lang-fr">Cookies</a>
-            <a href="https://example.com/legal" target="_blank" class="lang-de">Nutzungsbedingungen</a>
-            <a href="https://example.com/privacy" target="_blank" class="lang-de">Datenschutzrichtlinie</a>
-            <a href="https://example.com/cookies" target="_blank" class="lang-de">Cookies</a>
+            <a id="termsLink" class="lang-tr">Kullanım Şartları</a>
+            <a id="privacyLink" class="lang-tr">Gizlilik Politikası</a>
+            <a id="cookiesLink" class="lang-tr">Çerezler</a>
+            <a id="termsLinkEn" class="lang-en">Terms of Service</a>
+            <a id="privacyLinkEn" class="lang-en">Privacy Policy</a>
+            <a id="cookiesLinkEn" class="lang-en">Cookies</a>
+            <a id="termsLinkEs" class="lang-es">Términos de Servicio</a>
+            <a id="privacyLinkEs" class="lang-es">Política de Privacidad</a>
+            <a id="cookiesLinkEs" class="lang-es">Cookies</a>
+            <a id="termsLinkFr" class="lang-fr">Conditions d'Utilisation</a>
+            <a id="privacyLinkFr" class="lang-fr">Politique de Confidentialité</a>
+            <a id="cookiesLinkFr" class="lang-fr">Cookies</a>
+            <a id="termsLinkDe" class="lang-de">Nutzungsbedingungen</a>
+            <a id="privacyLinkDe" class="lang-de">Datenschutzrichtlinie</a>
+            <a id="cookiesLinkDe" class="lang-de">Cookies</a>
         </p>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <span id="modalClose" class="modal-close">&times;</span>
+            <h2>AI Destekli İngilizce Öğrenimine Hoş Geldiniz</h2>
+            <p>EnesLearn, yapay zekâ destekli interaktif öğrenme platformu olarak İngilizce öğrenme sürecinizi tamamen kişiselleştirir. Geleneksel yöntemlerin aksine, dil modelleriyle güçlendirilmiş deneyimler sayesinde dil öğrenme yolculuğunuzu hızlandırıyor ve maksimum verim almanızı sağlıyoruz.</p>
+            <p><strong>Özelliklerimiz:</strong></p>
+            <ul>
+                <li><strong>Gerçek Zamanlı Konuşma Pratiği:</strong> Yapay zekâ destekli sohbet botlarımızla 7/24 pratik yapın. Hatalarınızı anında düzeltin, telaffuzunuzu iyileştirin ve akıcı konuşma becerileri kazanın.</li>
+                <li><strong>Kapsamlı Dil Analizi:</strong> Yazılı ve sözlü girdilerinizi analiz eden sistemimiz, dilbilgisi, kelime dağarcığı ve telaffuz gibi alanlarda size anlık geri bildirim sunar.</li>
+                <li><strong>Kişiselleştirilmiş Ders Planları:</strong> Seviye tespit sınavıyla başlayan eğitim yolculuğunuz, güçlü ve zayıf yönlerinize göre dinamik olarak uyarlanır. Hedeflerinize odaklanarak zamanınızı en verimli şekilde kullanın.</li>
+                <li><strong>İnteraktif İçerik ve Oyunlaştırma:</strong> Etkileşimli dersler, quiz'ler ve oyunlaştırılmış modüllerle öğrenmeyi eğlenceli hale getiriyoruz. Başarılarınızı takip edin, rozetler kazanın ve motivasyonunuzu artırın.</li>
+                <li><strong>Uzman Eğitmen Desteği:</strong> Deneyimli İngilizce eğitmenlerimizle bire bir veya grup dersleri alın. Kişisel mentörlük sayesinde sorularınızı anında çözün ve öğrenme hedeflerinize ulaşın.</li>
+            </ul>
+            <p>EnesLearn, teknoloji ve pedagojiyi birleştirerek dil öğreniminizi bilimsel temellere dayandırır. Hemen kaydolun, sınav başarılarınızdan iş dünyasındaki kariyer fırsatlarınıza kadar her alanda İngilizce hakimiyetinizi artırın.</p>
+            <p>Detaylı bilgi ve kayıt için <a href="mailto:eneslearn.setup@gmail.com">bize ulaşın</a>.</p>
+        </div>
     </div>
 
     <script>
@@ -189,8 +236,68 @@
             setLanguage(e.target.value);
         });
 
+        // Click handlers for footer links to show alert notifications
+        const showNotification = (msg) => { alert(msg); };
+
+        document.getElementById('termsLink').addEventListener('click', () => {
+            showNotification('Kullanım Şartları içeriği yakında eklenecek.');
+        });
+        document.getElementById('privacyLink').addEventListener('click', () => {
+            showNotification('Gizlilik Politikası içeriği yakında eklenecek.');
+        });
+        document.getElementById('cookiesLink').addEventListener('click', () => {
+            showNotification('Çerez Politikası içeriği yakında eklenecek.');
+        });
+        document.getElementById('termsLinkEn').addEventListener('click', () => {
+            showNotification('Terms of Service content coming soon.');
+        });
+        document.getElementById('privacyLinkEn').addEventListener('click', () => {
+            showNotification('Privacy Policy content coming soon.');
+        });
+        document.getElementById('cookiesLinkEn').addEventListener('click', () => {
+            showNotification('Cookies policy content coming soon.');
+        });
+        document.getElementById('termsLinkEs').addEventListener('click', () => {
+            showNotification('Términos de Servicio pronto disponibles.');
+        });
+        document.getElementById('privacyLinkEs').addEventListener('click', () => {
+            showNotification('Política de Privacidad pronto disponible.');
+        });
+        document.getElementById('cookiesLinkEs').addEventListener('click', () => {
+            showNotification('Política de Cookies pronto disponible.');
+        });
+        document.getElementById('termsLinkFr').addEventListener('click', () => {
+            showNotification('Conditions d'Utilisation bientôt disponibles.');
+        });
+        document.getElementById('privacyLinkFr').addEventListener('click', () => {
+            showNotification('Politique de Confidentialité bientôt disponible.');
+        });
+        document.getElementById('cookiesLinkFr').addEventListener('click', () => {
+            showNotification('Politique de Cookies bientôt disponible.');
+        });
+        document.getElementById('termsLinkDe').addEventListener('click', () => {
+            showNotification('Nutzungsbedingungen bald verfügbar.');
+        });
+        document.getElementById('privacyLinkDe').addEventListener('click', () => {
+            showNotification('Datenschutzrichtlinie bald verfügbar.');
+        });
+        document.getElementById('cookiesLinkDe').addEventListener('click', () => {
+            showNotification('Cookies-Richtlinie bald verfügbar.');
+        });
+
+        // Handle Neden EnesLearn? modal
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalClose = document.getElementById('modalClose');
         document.getElementById('nedenButton').addEventListener('click', () => {
-            window.open('https://example.com/legal', '_blank');
+            modalOverlay.style.display = 'flex';
+        });
+        modalClose.addEventListener('click', () => {
+            modalOverlay.style.display = 'none';
+        });
+        window.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.style.display = 'none';
+            }
         });
     </script>
 </body>

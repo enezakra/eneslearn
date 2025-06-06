@@ -1,5 +1,4 @@
 /* style.css */
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -8,44 +7,27 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
 header {
   background: #1a73e8;
   color: #fff;
   padding: 20px;
   text-align: center;
 }
-
-header .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-header .logo img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-
 header h1 {
   margin: 0;
   font-size: 24px;
 }
-
 header .subtitle {
   margin-top: 5px;
   font-size: 14px;
   opacity: 0.9;
 }
-
 main {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .chat-section {
   width: 100%;
   max-width: 600px;
@@ -56,40 +38,33 @@ main {
   display: flex;
   flex-direction: column;
 }
-
 .chat-box {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
   max-height: 70vh;
 }
-
 .chat-message {
   margin-bottom: 15px;
 }
-
 .chat-message.user {
   text-align: right;
   color: #1a73e8;
 }
-
 .chat-message.ai {
   text-align: left;
   color: #333;
 }
-
 .chat-form {
   display: flex;
   border-top: 1px solid #ddd;
 }
-
 .chat-form input {
   flex: 1;
   padding: 15px;
   border: none;
   font-size: 14px;
 }
-
 .chat-form button {
   background: #1a73e8;
   color: #fff;
@@ -98,7 +73,6 @@ main {
   cursor: pointer;
   font-size: 14px;
 }
-
 footer {
   background: #1a73e8;
   color: #fff;

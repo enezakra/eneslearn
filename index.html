@@ -103,7 +103,7 @@
         .modal-content {
             background: #fff;
             color: #000;
-            max-width: 600px;
+            max-width: 80%;
             padding: 20px;
             border-radius: 5px;
             text-align: left;
@@ -170,20 +170,23 @@
             <span class="lang-de">Warum EnesLearn?</span>
         </div>
         <div class="legal-links">
+            <!-- Terms of Service -->
             <a id="termsLink" class="lang-tr">Kullanım Şartları</a>
-            <a id="privacyLink" class="lang-tr">Gizlilik Politikası</a>
-            <a id="cookiesLink" class="lang-tr">Çerezler</a>
             <a id="termsLinkEn" class="lang-en">Terms of Service</a>
-            <a id="privacyLinkEn" class="lang-en">Privacy Policy</a>
-            <a id="cookiesLinkEn" class="lang-en">Cookies</a>
             <a id="termsLinkEs" class="lang-es">Términos de Servicio</a>
-            <a id="privacyLinkEs" class="lang-es">Política de Privacidad</a>
-            <a id="cookiesLinkEs" class="lang-es">Cookies</a>
             <a id="termsLinkFr" class="lang-fr">Conditions d'Utilisation</a>
-            <a id="privacyLinkFr" class="lang-fr">Politique de Confidentialité</a>
-            <a id="cookiesLinkFr" class="lang-fr">Cookies</a>
             <a id="termsLinkDe" class="lang-de">Nutzungsbedingungen</a>
+            <!-- Privacy Policy -->
+            <a id="privacyLink" class="lang-tr">Gizlilik Politikası</a>
+            <a id="privacyLinkEn" class="lang-en">Privacy Policy</a>
+            <a id="privacyLinkEs" class="lang-es">Política de Privacidad</a>
+            <a id="privacyLinkFr" class="lang-fr">Politique de Confidentialité</a>
             <a id="privacyLinkDe" class="lang-de">Datenschutzrichtlinie</a>
+            <!-- Cookies -->
+            <a id="cookiesLink" class="lang-tr">Çerezler</a>
+            <a id="cookiesLinkEn" class="lang-en">Cookies</a>
+            <a id="cookiesLinkEs" class="lang-es">Cookies</a>
+            <a id="cookiesLinkFr" class="lang-fr">Cookies</a>
             <a id="cookiesLinkDe" class="lang-de">Cookies</a>
         </div>
         <p>
@@ -191,38 +194,200 @@
             <span class="lang-en">© 2025 EnesLearn. All Rights Reserved.</span>
             <span class="lang-es">© 2025 EnesLearn. Todos los Derechos Reservados.</span>
             <span class="lang-fr">© 2025 EnesLearn. Tous Droits Réservés.</span>
-            <span class="lang-de">© 2025 EnesLearn. Alle Rechte Vorbehalten.</span>
+            <span class="lang-de">© 2025 EnesLearn. Alle Rechte vorbehalten.</span>
         </p>
     </div>
 
-    <!-- Modal Overlay -->
-    <div id="modalOverlay" class="modal-overlay">
+    <!-- Modal for Neden EnesLearn? -->
+    <div id="modalOverlayNeden" class="modal-overlay">
         <div class="modal-content">
-            <span id="modalClose" class="modal-close">&times;</span>
-            <h2>AI Destekli İngilizce Öğrenimine Hoş Geldiniz</h2>
-            <p>EnesLearn, yapay zekâ destekli interaktif öğrenme platformu olarak İngilizce öğrenme sürecinizi tamamen kişiselleştirir. Geleneksel yöntemlerin aksine, dil modelleriyle güçlendirilmiş deneyimler sayesinde dil öğrenme yolculuğunuzu hızlandırıyor ve maksimum verim almanızı sağlıyoruz.</p>
-            <p><strong>Özelliklerimiz:</strong></p>
-            <ul>
-                <li><strong>Gerçek Zamanlı Konuşma Pratiği:</strong> Yapay zekâ destekli sohbet botlarımızla 7/24 pratik yapın. Hatalarınızı anında düzeltin, telaffuzunuzu iyileştirin ve akıcı konuşma becerileri kazanın.</li>
-                <li><strong>Kapsamlı Dil Analizi:</strong> Yazılı ve sözlü girdilerinizi analiz eden sistemimiz, dilbilgisi, kelime dağarcığı ve telaffuz gibi alanlarda size anlık geri bildirim sunar.</li>
-                <li><strong>Kişiselleştirilmiş Ders Planları:</strong> Seviye tespit sınavıyla başlayan eğitim yolculuğunuz, güçlü ve zayıf yönlerinize göre dinamik olarak uyarlanır. Hedeflerinize odaklanarak zamanınızı en verimli şekilde kullanın.</li>
-                <li><strong>İnteraktif İçerik ve Oyunlaştırma:</strong> Etkileşimli dersler, quiz'ler ve oyunlaştırılmış modüllerle öğrenmeyi eğlenceli hale getiriyoruz. Başarılarınızı takip edin, rozetler kazanın ve motivasyonunuzu artırın.</li>
-                <li><strong>Uzman Eğitmen Desteği:</strong> Deneyimli İngilizce eğitmenlerimizle bire bir veya grup dersleri alın. Kişisel mentörlük sayesinde sorularınızı anında çözün ve öğrenme hedeflerinize ulaşın.</li>
-            </ul>
-            <p>EnesLearn, teknoloji ve pedagojiyi birleştirerek dil öğreniminizi bilimsel temellere dayandırır. Hemen kaydolun, sınav başarılarınızdan iş dünyasındaki kariyer fırsatlarınıza kadar her alanda İngilizce hakimiyetinizi artırın.</p>
-            <p>Detaylı bilgi ve kayıt için <a href="mailto:eneslearn.setup@gmail.com">bize ulaşın</a>.</p>
+            <span id="modalCloseNeden" class="modal-close">&times;</span>
+            <div class="lang-tr">
+                <h2>AI Destekli İngilizce Öğrenimine Hoş Geldiniz</h2>
+                <p>EnesLearn, yapay zekâ destekli interaktif öğrenme platformu olarak İngilizce öğrenme sürecinizi tamamen kişiselleştirir. Geleneksel yöntemlerin aksine, dil modelleriyle güçlendirilmiş deneyimler sayesinde dil öğrenme yolculuğunuzu hızlandırıyor ve maksimum verim almanızı sağlıyoruz.</p>
+                <p><strong>Özelliklerimiz:</strong></p>
+                <ul>
+                    <li><strong>Gerçek Zamanlı Konuşma Pratiği:</strong> Yapay zekâ destekli sohbet botlarımızla 7/24 pratik yapın. Hatalarınızı anında düzeltin, telaffuzunuzu iyileştirin ve akıcı konuşma becerileri kazanın.</li>
+                    <li><strong>Kapsamlı Dil Analizi:</strong> Yazılı ve sözlü girdilerinizi analiz eden sistemimiz, dilbilgisi, kelime dağarcığı ve telaffuz gibi alanlarda size anlık geri bildirim sunar.</li>
+                    <li><strong>Kişiselleştirilmiş Ders Planları:</strong> Seviye tespit sınavıyla başlayan eğitim yolculuğunuz, güçlü ve zayıf yönlerinize göre dinamik olarak uyarlanır. Hedeflerinize odaklanarak zamanınızı en
+                        verimli şekilde kullanın.</li>
+                    <li><strong>İnteraktif İçerik ve Oyunlaştırma:</strong> Etkileşimli dersler, quiz'ler ve oyunlaştırılmış modüllerle öğrenmeyi eğlenceli hale getiriyoruz. Başarılarınızı takip edin, rozetler kazanın ve motivasyonunuzu artırın.</li>
+                    <li><strong>Uzman Eğitmen Desteği:</strong> Deneyimli İngilizce eğitmenlerimizle bire bir veya grup dersleri alın. Kişisel mentörlük sayesinde sorularınızı anında çözün ve öğrenme hedeflerinize ulaşın.</li>
+                </ul>
+                <p>EnesLearn, teknoloji ve pedagojiyi birleştirerek dil öğreniminizi bilimsel temellere dayandırır. Hemen kaydolun, sınav başarılarınızdan iş dünyasındaki kariyer fırsatlarınıza kadar her alanda İngilizce hakimiyetinizi artırın.</p>
+                <p>Detaylı bilgi ve kayıt için <a href="mailto:eneslearn.setup@gmail.com">bize ulaşın</a>.</p>
+            </div>
+            <div class="lang-en">
+                <h2>Welcome to AI-Powered English Learning</h2>
+                <p>EnesLearn is an AI-driven interactive learning platform that fully personalizes your English learning journey. Unlike traditional methods, our experience powered by advanced language models accelerates your progress and ensures maximum efficiency.</p>
+                <p><strong>Our Features:</strong></p>
+                <ul>
+                    <li><strong>Real-Time Speaking Practice:</strong> Practice 24/7 with our AI-powered chatbots. Get instant corrections, improve your pronunciation, and gain fluent speaking skills.</li>
+                    <li><strong>Comprehensive Language Analysis:</strong> Our system analyzes your written and spoken input, providing real-time feedback on grammar, vocabulary, and pronunciation.</li>
+                    <li><strong>Personalized Lesson Plans:</strong> Starting with a placement test, your learning path dynamically adapts to your strengths and weaknesses. Focus on your goals and use your time efficiently.</li>
+                    <li><strong>Interactive Content and Gamification:</strong> We make learning fun with interactive lessons, quizzes, and gamified modules. Track your achievements, earn badges, and boost your motivation.</li>
+                    <li><strong>Expert Tutor Support:</strong> Take one-on-one or group sessions with our experienced English tutors. With personalized mentorship, get your questions answered instantly and achieve your learning goals.</li>
+                </ul>
+                <p>EnesLearn combines technology and pedagogy to base your language learning on scientific principles. Sign up now to enhance your English proficiency for exams, career opportunities, and more.</p>
+                <p>For more information and to register, <a href="mailto:eneslearn.setup@gmail.com">contact us</a>.</p>
+            </div>
+            <div class="lang-es">
+                <h2>Bienvenido al Aprendizaje de Inglés Impulsado por IA</h2>
+                <p>EnesLearn es una plataforma de aprendizaje interactivo impulsada por IA que personaliza completamente tu proceso de aprendizaje de inglés. A diferencia de los métodos tradicionales, nuestra experiencia impulsada por modelos de lenguaje avanzados acelera tu progreso y asegura la máxima eficiencia.</p>
+                <p><strong>Nuestras Características:</strong></p>
+                <ul>
+                    <li><strong>Práctica de Conversación en Tiempo Real:</strong> Practica 24/7 con nuestros chatbots impulsados por IA. Obtén correcciones instantáneas, mejora tu pronunciación y adquiere habilidades fluidez al hablar.</li>
+                    <li><strong>Análisis de Lenguaje Integral:</strong> Nuestro sistema analiza tus entradas escritas y habladas, proporcionando retroalimentación en tiempo real sobre gramática, vocabulario y pronunciación.</li>
+                    <li><strong>Planes de Lecciones Personalizados:</strong> Comenzando con una prueba de nivel, tu ruta de aprendizaje se adapta dinámicamente a tus fortalezas y debilidades. Concéntrate en tus objetivos y utiliza tu tiempo de manera eficiente.</li>
+                    <li><strong>Contenido Interactivo y Gamificación:</strong> Hacemos el aprendizaje divertido con lecciones interactivas, cuestionarios y módulos gamificados. Rastrea tus logros, gana insignias y aumenta tu motivación.</li>
+                    <li><strong>Apoyo de Tutores Expertos:</strong> Ten sesiones individuales o grupales con nuestros tutores de inglés experimentados. Con mentoría personalizada, obtén respuestas instantáneas a tus preguntas y alcanza tus objetivos de aprendizaje.</li>
+                </ul>
+                <p>EnesLearn combina tecnología y pedagogía para basar tu aprendizaje de idiomas en principios científicos. Regístrate ahora para mejorar tu dominio del inglés para exámenes, oportunidades profesionales y más.</p>
+                <p>Para más información y registro, <a href="mailto:eneslearn.setup@gmail.com">contáctanos</a>.</p>
+            </div>
+            <div class="lang-fr">
+                <h2>Bienvenue dans l'Apprentissage de l'Anglais Assisté par IA</h2>
+                <p>EnesLearn est une plateforme d'apprentissage interactif alimentée par IA qui personnalise entièrement votre parcours d'apprentissage de l'anglais. Contrairement aux méthodes traditionnelles, notre expérience basée sur des modèles de langage avancés accélère votre progression et garantit une efficacité maximale.</p>
+                <p><strong>Nos Fonctionnalités :</strong></p>
+                <ul>
+                    <li><strong>Pratique de Conversation en Temps Réel :</strong> Pratiquez 24h/24 et 7j/7 avec nos chatbots alimentés par IA. Obtenez des corrections instantanées, améliorez votre prononciation et gagnez en aisance à l'oral.</li>
+                    <li><strong>Analyse Linguistique Complète :</strong> Notre système analyse vos entrées écrites et orales, fournissant des retours en temps réel sur la grammaire, le vocabulaire et la prononciation.</li>
+                    <li><strong>Plans de Cours Personnalisés :</strong> Commencez par un test de niveau, votre parcours d'apprentissage s'adapte dynamiquement à vos points forts et faibles. Concentrez-vous sur vos objectifs et utilisez efficacement votre temps.</li>
+                    <li><strong>Contenu Interactif et Gamification :</strong> Nous rendons l'apprentissage amusant avec des leçons interactives, des quiz et des modules gamifiés. Suivez vos réussites, gagnez des badges et augmentez votre motivation.</li>
+                    <li><strong>Support de Tuteurs Experts :</strong> Suivez des séances individuelles ou en groupe avec nos tuteurs d'anglais expérimentés. Avec un mentorat personnalisé, obtenez des réponses instantanées à vos questions et atteignez vos objectifs d'apprentissage.</li>
+                </ul>
+                <p>EnesLearn allie technologie et pédagogie pour baser votre apprentissage des langues sur des principes scientifiques. Inscrivez-vous dès maintenant pour améliorer votre maîtrise de l'anglais pour les examens, les opportunités professionnelles, et plus encore.</p>
+                <p>Pour plus d'informations et vous inscrire, <a href="mailto:eneslearn.setup@gmail.com">contactez-nous</a>.</p>
+            </div>
+            <div class="lang-de">
+                <h2>Willkommen beim KI-gestützten Englischlernen</h2>
+                <p>EnesLearn ist eine KI-gestützte interaktive Lernplattform, die Ihre Englischlernreise vollständig personalisiert. Im Gegensatz zu traditionellen Methoden beschleunigt unsere von fortschrittlichen Sprachmodellen angetriebene Erfahrung Ihren Fortschritt und sorgt für maximale Effizienz.</p>
+                <p><strong>Unsere Funktionen:</strong></p>
+                <ul>
+                    <li><strong>Echtzeit-Sprechübung:</strong> Üben Sie rund um die Uhr mit unseren KI-Chatbots. Erhalten Sie sofortige Korrekturen, verbessern Anda pronunciation und erlangen flüssige Sprechfähigkeiten.</li>
+                    <li><strong>Umfassende Sprachanalyse:</strong> Unser System analysiert Ihre schriftlichen und gesprochenen Eingaben und bietet Ihnen in Echtzeit Feedback zu Grammatik, Wortschatz und Aussprache.</li>
+                    <li><strong>Personalisierte Lernpläne:</strong> Beginnend mit einem Einstufungstest passt sich Ihr Lernweg dynamisch an Ihre Stärken und Schwächen an. Konzentrieren Sie sich auf Ihre Ziele und verwenden Sie Ihre Zeit effizient.</li>
+                    <li><strong>Interaktiver Inhalt und Gamifizierung:</strong> Wir machen das Lernen mit interaktiven Lektionen, Quizzen und gamifizierten Modulen unterhaltsam. Verfolgen Sie Ihren Fortschritt, verdienen Sie Abzeichen und steigern Sie Ihre Motivation.</li>
+                    <li><strong>Unterstützung durch Experten-Tutoren:</strong> Nehmen Sie an Einzel- oder Gruppensitzungen mit unseren erfahrenen Englisch-Tutoren teil. Mit personalisierter Betreuung erhalten Sie sofortige Antworten auf Ihre Fragen und erreichen Ihre Lernziele.</li>
+                </ul>
+                <p>EnesLearn kombiniert Technologie und Pädagogik, um Ihr Sprachenlernen wissenschaftlich fundiert zu gestalten. Melden Sie sich jetzt an, um Ihre Englischkenntnisse für Prüfungen, Karrierechancen und mehr zu verbessern.</p>
+                <p>Für weitere Informationen und zur Registrierung, <a href="mailto:eneslearn.setup@gmail.com">kontaktieren Sie uns</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Legal Content (Terms, Privacy, Cookies) -->
+    <div id="modalOverlayLegal" class="modal-overlay">
+        <div class="modal-content">
+            <span id="modalCloseLegal" class="modal-close">&times;</span>
+            <!-- Terms of Service Content -->
+            <div id="termsContent" class="lang-tr" style="display:none;">
+                <h2>Kullanım Şartları</h2>
+                <p>Bu Kullanım Şartları (“Şartlar”), EnesLearn web sitesi (“Site”) ve hizmetlerini (“Hizmet”) kullanma şartlarını açıklar. Siteye erişerek veya Hizmetleri kullanarak, bu Şartları kabul etmiş sayılırsınız. Eğer bu Şartları kabul etmiyorsanız, Siteyi veya Hizmetleri kullanmamalısınız.</p>
+                <h3>1. Hizmet Tanımı</h3>
+                <p>EnesLearn, yapay zeka destekli interaktif dil öğrenme hizmetleri sunar. Site üzerinden derslere erişim, etkileşimli testler ve kullanıcı etkileşimli materyaller sağlanmaktadır.</p>
+                <h3>2. Kayıt ve Hesap Güvenliği</h3>
+                <p>Kullanıcılar, doğru ve güncel bilgi vererek hesap oluşturmalıdır. Hesap bilgileri üçüncü kişilerle paylaşılmamalı ve kullanıcı hesabından yapılan tüm işlemlerden kullanıcı sorumludur.</p>
+                <h3>3. Kullanım Kuralları</h3>
+                <p>Kullanıcılar, Siteyi yasal ve amacına uygun olarak kullanmayı kabul eder. Telif hakkı ihlali, hakaret, tehdit veya yasa dışı içerik paylaşımı yasaktır.</p>
+                <h3>4. Fesih ve Askıya Alma</h3>
+                <p>EnesLearn, kullanıcıların Şartları ihlal etmeleri durumunda hesapları askıya alma veya feshetme hakkını saklı tutar.</p>
+                <h3>5. Sorumluluk Sınırlamaları</h3>
+                <p>EnesLearn, Hizmetlerin kesintisiz veya hatasız olduğunu garanti etmez. Site kullanımından dolayı doğrudan veya dolaylı zararlardan sorumlu tutulamaz.</p>
+                <h3>6. Değişiklikler</h3>
+                <p>EnesLearn, bu Şartları istediği zaman güncelleme hakkına sahiptir. Güncellemeler, Site üzerinde yayınlandığı anda yürürlüğe girer.</p>
+                <h3>7. İletişim</h3>
+                <p>Bu Şartlar ile ilgili sorularınızı <a href="mailto:eneslearn.setup@gmail.com">eneslearn.setup@gmail.com</a> adresine gönderebilirsiniz.</p>
+            </div>
+            <div id="termsContentEn" class="lang-en" style="display:none;">
+                <h2>Terms of Service</h2>
+                <p>These Terms of Service (“Terms”) outline the rules for using the EnesLearn website (“Site”) and services (“Service”). By accessing the Site or using the Service, you agree to these Terms. If you do not agree, do not use the Site or Service.</p>
+                <h3>1. Service Description</h3>
+                <p>EnesLearn provides AI-powered interactive language learning services. Users can access lessons, interactive quizzes, and user-engagement materials through the Site.</p>
+                <h3>2. Account Registration and Security</h3>
+                <p>Users must create an account with accurate and up-to-date information. Account credentials should not be shared, and users are responsible for all activities performed under their account.</p>
+                <h3>3. Usage Rules</h3>
+                <p>Users agree to use the Site lawfully and for its intended purpose. Copyright infringement, harassment, threats, or illegal content sharing is prohibited.</p>
+                <h3>4. Termination and Suspension</h3>
+                <p>EnesLearn reserves the right to suspend or terminate accounts that violate these Terms.</p>
+                <h3>5. Limitation of Liability</h3>
+                <p>EnesLearn does not guarantee uninterrupted or error-free Service. The Site is not liable for any direct or indirect damages resulting from its use.</p>
+                <h3>6. Changes to Terms</h3>
+                <p>EnesLearn may update these Terms at any time. Changes take effect upon posting on the Site.</p>
+                <h3>7. Contact</h3>
+                <p>If you have any questions regarding these Terms, please email <a href="mailto:eneslearn.setup@gmail.com">eneslearn.setup@gmail.com</a>.</p>
+            </div>
+            <div id="privacyContent" class="lang-tr" style="display:none;">
+                <h2>Gizlilik Politikası</h2>
+                <p>EnesLearn olarak kullanıcı verilerinin gizliliğine önem veriyoruz. Bu Gizlilik Politikası, hangi verileri topladığımızı, nasıl kullandığımızı ve koruduğumuzu açıklamaktadır.</p>
+                <h3>1. Toplanan Veriler</h3>
+                <p>Kaydolurken sağlanan ad, e-posta ve kullanım verileri (sayfa görüntülemeleri, ders aktiviteleri) toplanır.</p>
+                <h3>2. Veri Kullanımı</h3>
+                <p>Toplanan veriler, hizmetlerin iyileştirilmesi, kişiselleştirilmiş içerik sunma ve kullanıcı desteği amacıyla kullanılır.</p>
+                <h3>3. Veri Güvenliği</h3>
+                <p>Kullanıcı verileri şifrelenmiş olarak saklanır ve yalnızca yetkili personel tarafından erişilebilir.</p>
+                <h3>4. Üçüncü Taraf Paylaşımı</h3>
+                <p>Kullanıcı verileri, yasal yükümlülükler haricinde üçüncü taraflarla paylaşılmaz.</p>
+                <h3>5. Çerez Politikası</h3>
+                <p>Site, kullanıcı deneyimini iyileştirmek için çerezler kullanır. Çerezleri reddetmek için tarayıcı ayarlarını kullanabilirsiniz.</p>
+                <h3>6. Değişiklikler</h3>
+                <p>Gizlilik Politikasını değiştirme hakkımız saklıdır. Değişiklikler Site’de yayınlandığı anda geçerli olur.</p>
+            </div>
+            <div id="privacyContentEn" class="lang-en" style="display:none;">
+                <h2>Privacy Policy</h2>
+                <p>At EnesLearn, we value user privacy. This Privacy Policy explains what data we collect, how we use it, and how we protect it.</p>
+                <h3>1. Data Collected</h3>
+                <p>We collect name, email, and usage data (page views, lesson activities) provided during registration.</p>
+                <h3>2. Data Usage</h3>
+                <p>Collected data is used to improve services, provide personalized content, and for user support purposes.</p>
+                <h3>3. Data Security</h3>
+                <p>User data is stored securely with encryption and only accessible by authorized personnel.</p>
+                <h3>4. Third-Party Sharing</h3>
+                <p>User data is not shared with third parties except for legal obligations.</p>
+                <h3>5. Cookie Policy</h3>
+                <p>The Site uses cookies to enhance user experience. You can disable cookies via your browser settings.</p>
+                <h3>6. Changes</h3>
+                <p>We reserve the right to modify this Privacy Policy. Changes become effective upon posting on the Site.</p>
+            </div>
+            <div id="cookiesContent" class="lang-tr" style="display:none;">
+                <h2>Çerez Politikası</h2>
+                <p>Çerezler, Site deneyiminizi iyileştirmek için kullanılan küçük veri dosyalarıdır.</p>
+                <h3>1. Çerez Türleri</h3<
+                <p>Oturum çerezleri, kalıcı çerezler ve üçüncü taraf çerezleri kullanıyoruz.</p>
+                <h3>2. Çerez Kullanımı</h3>
+                <p>Çerezler, kullanıcı tercihlerini hatırlama, analiz yapma ve reklam hedefleme için kullanılır.</p>
+                <h3>3. Çerez Ayarları</h3>
+                <p>Tarayıcı ayarlarından çerezleri devre dışı bırakabilir veya silebilirsiniz. Bu durumda Site işlevlerinin bir kısmı çalışmayabilir.</p>
+            </div>
+            <div id="cookiesContentEn" class="lang-en" style="display:none;">
+                <h2>Cookies Policy</h2>
+                <p>Cookies are small data files used to enhance your experience on the Site.</p>
+                <h3>1. Types of Cookies</h3>
+                <p>We use session cookies, persistent cookies, and third-party cookies.</p>
+                <h3>2. Use of Cookies</h3>
+                <p>Cookies are used to remember preferences, perform analytics, and for advertising targeting.</p>
+                <h3>3. Cookie Settings</h3>
+                <p>You can disable or delete cookies in your browser settings. Some Site functions may not work.</p>
+            </div>
         </div>
     </div>
 
     <script>
         const langSelect = document.getElementById('langSelect');
         const setLanguage = (lang) => {
-            document.querySelectorAll('.lang-tr').forEach(el => el.style.display = (lang === 'tr') ? 'block' : 'none');
-            document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en') ? 'block' : 'none');
-            document.querySelectorAll('.lang-es').forEach(el => el.style.display = (lang === 'es') ? 'block' : 'none');
-            document.querySelectorAll('.lang-fr').forEach(el => el.style.display = (lang === 'fr') ? 'block' : 'none');
-            document.querySelectorAll('.lang-de').forEach(el => el.style.display = (lang === 'de') ? 'block' : 'none');
+            // Show/hide all language elements
+            ['tr','en','es','fr','de'].forEach(l => {
+                document.querySelectorAll('.lang-' + l).forEach(el => el.style.display = el.classList.contains('lang-' + lang) ? 'block' : 'none');
+            });
+            // Show appropriate legal content defaults set to hidden
+            hideAllLegalContent();
             localStorage.setItem('lang', lang);
+        };
+
+        const hideAllLegalContent = () => {
+            ['termsContent','termsContentEn','privacyContent','privacyContentEn','cookiesContent','cookiesContentEn'].forEach(id => {
+                document.getElementById(id).style.display = 'none';
+            });
         };
 
         const savedLang = localStorage.getItem('lang') || 'tr';
@@ -233,42 +398,55 @@
             setLanguage(e.target.value);
         });
 
-        // Click handlers for footer legal links to show alert notifications
-        const showNotification = (msg) => { alert(msg); };
-
-        const legalIds = [
-            ['termsLink', 'Kullanım Şartları içeriği yakında eklenecek.'],
-            ['privacyLink', 'Gizlilik Politikası içeriği yakında eklenecek.'],
-            ['cookiesLink', 'Çerez Politikası içeriği yakında eklenecek.'],
-            ['termsLinkEn', 'Terms of Service content coming soon.'],
-            ['privacyLinkEn', 'Privacy Policy content coming soon.'],
-            ['cookiesLinkEn', 'Cookies policy content coming soon.'],
-            ['termsLinkEs', 'Términos de Servicio pronto disponibles.'],
-            ['privacyLinkEs', 'Política de Privacidad pronto disponible.'],
-            ['cookiesLinkEs', 'Política de Cookies pronto disponible.'],
-            ['termsLinkFr', "Conditions d'Utilisation bientôt disponibles."],
-            ['privacyLinkFr', "Politique de Confidentialité bientôt disponible."],
-            ['cookiesLinkFr', "Politique de Cookies bientôt disponible."],
-            ['termsLinkDe', 'Nutzungsbedingungen bald verfügbar.'],
-            ['privacyLinkDe', 'Datenschutzrichtlinie bald verfügbar.'],
-            ['cookiesLinkDe', 'Cookies-Richtlinie bald verfügbar.']
-        ];
-        legalIds.forEach(([id, msg]) => {
-            document.getElementById(id).addEventListener('click', () => showNotification(msg));
-        });
-
-        // Handle Neden EnesLearn? modal
-        const modalOverlay = document.getElementById('modalOverlay');
-        const modalClose = document.getElementById('modalClose');
+        // Neden EnesLearn modal
+        const modalOverlayNeden = document.getElementById('modalOverlayNeden');
+        const modalCloseNeden = document.getElementById('modalCloseNeden');
         document.getElementById('nedenButton').addEventListener('click', () => {
-            modalOverlay.style.display = 'flex';
+            modalOverlayNeden.style.display = 'flex';
         });
-        modalClose.addEventListener('click', () => {
-            modalOverlay.style.display = 'none';
+        modalCloseNeden.addEventListener('click', () => {
+            modalOverlayNeden.style.display = 'none';
         });
         window.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) {
-                modalOverlay.style.display = 'none';
+            if (e.target === modalOverlayNeden) {
+                modalOverlayNeden.style.display = 'none';
+            }
+        });
+
+        // Legal modals
+        const modalOverlayLegal = document.getElementById('modalOverlayLegal');
+        const modalCloseLegal = document.getElementById('modalCloseLegal');
+
+        const openLegalModal = (contentId) => {
+            hideAllLegalContent();
+            document.getElementById(contentId).style.display = 'block';
+            modalOverlayLegal.style.display = 'flex';
+        };
+
+        document.getElementById('termsLink').addEventListener('click', () => openLegalModal('termsContent'));
+        document.getElementById('termsLinkEn').addEventListener('click', () => openLegalModal('termsContentEn'));
+        document.getElementById('termsLinkEs').addEventListener('click', () => openLegalModal('termsContentEn'));
+        document.getElementById('termsLinkFr').addEventListener('click', () => openLegalModal('termsContentEn'));
+        document.getElementById('termsLinkDe').addEventListener('click', () => openLegalModal('termsContentEn'));
+
+        document.getElementById('privacyLink').addEventListener('click', () => openLegalModal('privacyContent'));
+        document.getElementById('privacyLinkEn').addEventListener('click', () => openLegalModal('privacyContentEn'));
+        document.getElementById('privacyLinkEs').addEventListener('click', () => openLegalModal('privacyContentEn'));
+        document.getElementById('privacyLinkFr').addEventListener('click', () => openLegalModal('privacyContentEn'));
+        document.getElementById('privacyLinkDe').addEventListener('click', () => openLegalModal('privacyContentEn'));
+
+        document.getElementById('cookiesLink').addEventListener('click', () => openLegalModal('cookiesContent'));
+        document.getElementById('cookiesLinkEn').addEventListener('click', () => openLegalModal('cookiesContentEn'));
+        document.getElementById('cookiesLinkEs').addEventListener('click', () => openLegalModal('cookiesContentEn'));
+        document.getElementById('cookiesLinkFr').addEventListener('click', () => openLegalModal('cookiesContentEn'));
+        document.getElementById('cookiesLinkDe').addEventListener('click', () => openLegalModal('cookiesContentEn'));
+
+        modalCloseLegal.addEventListener('click', () => {
+            modalOverlayLegal.style.display = 'none';
+        });
+        window.addEventListener('click', (e) => {
+            if (e.target === modalOverlayLegal) {
+                modalOverlayLegal.style.display = 'none';
             }
         });
     </script>

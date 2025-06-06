@@ -6,7 +6,7 @@ const userInput = document.getElementById('user-input');
 const chatBox = document.getElementById('chat-box');
 
 // Replace <YOUR_VERCEL_DOMAIN> with your actual Vercel deployment domain:
-const HF_API_URL = 'https://<eneslearn.vercel.app>.vercel.app/api/chat';
+const HF_API_URL = 'https://eneslearn.vercel.app/api/chat';
 
 function addMessage(text, sender) {
   const div = document.createElement('div');

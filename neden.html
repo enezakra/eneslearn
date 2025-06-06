@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neden EnesLearn?</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <style>
+        body, html {
+            margin: 0; padding: 0; height: 100%; font-family: Arial, sans-serif;
+            background: url('assets/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .header img {
+            max-width: 150px;
+            height: auto;
+        }
+        .container {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            min-height: calc(100vh - 80px);
+            box-sizing: border-box;
+        }
+        #backLink {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8eb6f5;
+            text-decoration: none;
+        }
+        #langSelect {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 1000;
+            padding: 5px;
+        }
+        .lang-tr { display: none; }
+        .lang-en { display: none; }
+    </style>
+</head>
+<body>
+    <select id="langSelect">
+        <option value="tr">TR</option>
+        <option value="en">EN</option>
+    </select>
+    <div class="header">
+        <img src="assets/logo.ico" alt="EnesLearn Logo">
+    </div>
+    <div class="container">
+        <a id="backLink" href="index.html">
+            <span class="lang-tr">&#8592; Geri Dön</span>
+            <span class="lang-en">&#8592; Back</span>
+        </a>
+        <h1 class="lang-tr">Neden EnesLearn?</h1>
+        <h1 class="lang-en">Why EnesLearn?</h1>
+        <p class="lang-tr">Burada EnesLearn hakkında ilham verici uzun bir metin olacak.</p>
+        <p class="lang-en">Here will be a long inspiring text about EnesLearn.</p>
+    </div>
+
+    <script>
+        const langSelect = document.getElementById('langSelect');
+        const setLanguage = (lang) => {
+            document.querySelectorAll('.lang-tr').forEach(el => { el.style.display = (lang === 'tr') ? 'inline' : 'none'; });
+            document.querySelectorAll('.lang-en').forEach(el => { el.style.display = (lang === 'en') ? 'inline' : 'none'; });
+            localStorage.setItem('lang', lang);
+        };
+
+        const savedLang = localStorage.getItem('lang') || 'tr';
+        langSelect.value = savedLang;
+        setLanguage(savedLang);
+
+        langSelect.addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+        });
+    </script>
+</body>
+</html>

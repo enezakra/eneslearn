@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnesLearn</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <style>
+        body, html {
+            margin: 0; padding: 0; height: 100%; font-family: Arial, sans-serif;
+            /* Background image */
+            background: url('assets/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .header img {
+            max-width: 150px;
+            height: auto;
+        }
+        .content {
+            min-height: calc(100vh - 160px);
+            padding: 20px;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .footer {
+            position: relative;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 60px 10px 20px; /* increased top padding to accommodate button */
+        }
+        .footer a {
+            color: #8eb6f5;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        #nedenButton {
+            position: absolute;
+            right: 20px;
+            top: -30px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        #langSelect {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 1000;
+            padding: 5px;
+        }
+        .lang-tr { display: none; }
+        .lang-en { display: none; }
+    </style>
+</head>
+<body>
+    <select id="langSelect">
+        <option value="tr">TR</option>
+        <option value="en">EN</option>
+    </select>
+    <div class="header">
+        <img src="assets/logo.ico" alt="EnesLearn Logo">
+    </div>
+    <div class="content">
+        <h1 class="lang-tr">EnesLearn</h1>
+        <h1 class="lang-en">EnesLearn</h1>
+        <p class="lang-tr">Web sitenize hoş geldiniz!</p>
+        <p class="lang-en">Welcome to your website!</p>
+    </div>
+    <div class="footer">
+        <button id="nedenButton">
+            <span class="lang-tr">Neden EnesLearn?</span>
+            <span class="lang-en">Why EnesLearn?</span>
+        </button>
+        <p>
+            <span class="lang-tr">© 2025 EnesLearn. Tüm Hakları Saklıdır.</span>
+            <span class="lang-en">© 2025 EnesLearn. All Rights Reserved.</span>
+        </p>
+        <p>
+            <a href="#" class="lang-tr">Kullanım Şartları</a>
+            <a href="#" class="lang-tr">Gizlilik Politikası</a>
+            <a href="#" class="lang-tr">Çerezler</a>
+            <a href="#" class="lang-en">Terms of Use</a>
+            <a href="#" class="lang-en">Privacy Policy</a>
+            <a href="#" class="lang-en">Cookies</a>
+        </p>
+    </div>
+
+    <script>
+        const langSelect = document.getElementById('langSelect');
+        const setLanguage = (lang) => {
+            document.querySelectorAll('.lang-tr').forEach(el => { el.style.display = (lang === 'tr') ? 'inline' : 'none'; });
+            document.querySelectorAll('.lang-en').forEach(el => { el.style.display = (lang === 'en') ? 'inline' : 'none'; });
+            localStorage.setItem('lang', lang);
+        };
+
+        const savedLang = localStorage.getItem('lang') || 'tr';
+        langSelect.value = savedLang;
+        setLanguage(savedLang);
+
+        langSelect.addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+        });
+
+        document.getElementById('nedenButton').addEventListener('click', () => {
+            window.location.href = 'neden.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,3 +1,1 @@
-# Hugging Face API Key'inizi buraya (hf_ ile başlayan) ekleyin.
-# Örneğin:
-# hf_abcdefgh1234567890
+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

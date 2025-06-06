@@ -8,10 +8,29 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-image: url('background.png');
+            background: url('background.png') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
             color: white;
+        }
+        .lang-switch {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .lang-switch button {
+            margin-right: 5px;
+            padding: 5px 10px;
+        }
+        .contact-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #0077cc;
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
         .container {
             text-align: center;
@@ -19,7 +38,12 @@
             background-color: rgba(0, 0, 0, 0.6);
             padding: 30px;
             border-radius: 10px;
-            display: inline-block;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .logo {
+            width: 100px;
         }
         .buttons button {
             margin: 10px;
@@ -30,17 +54,84 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.7);
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+        .footer a {
+            color: #ccc;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .why-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0077cc;
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .why-text {
+            display: none;
+            position: fixed;
+            bottom: 70px;
+            right: 20px;
+            width: 320px;
+            background-color: #222;
+            padding: 15px;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
+    <div class="lang-switch">
+        <button onclick="setLanguage('tr')">TR</button>
+        <button onclick="setLanguage('en')">EN</button>
+    </div>
+    <button class="contact-button" onclick="alert('İletişim formu buraya eklenecek')">Bizimle İletişime Geç</button>
     <div class="container">
-        <img src="logo.png" alt="Logo" width="100">
-        <h1>EnesLearn'e Hoş Geldiniz</h1>
-        <p>Yapay zeka destekli İngilizce öğrenme platformu</p>
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1 id="welcome">EnesLearn'e Hoş Geldiniz</h1>
+        <p id="tagline">Yapay zeka destekli İngilizce öğrenme platformu</p>
         <div class="buttons">
-            <button onclick="location.href='login.html'">Giriş Yap</button>
-            <button onclick="location.href='register.html'">Üye Ol</button>
+            <button onclick="alert('Giriş Yap')">Giriş Yap</button>
+            <button onclick="alert('Üye Ol')">Üye Ol</button>
         </div>
     </div>
+    <div class="why-button" onclick="toggleWhy()">Neden EnesLearn?</div>
+    <div class="why-text" id="whyText">
+        EnesLearn, kişiye özel öğrenme deneyimi sunan bir platformdur. Yapay zekâ destekli analizlerle seviyenizi belirler, eksiklerinizi tespit eder ve size özel içerikler önerir. 
+        Türkçe destekli açıklamalar, zengin görseller, oyunlaştırılmış sistem ve detaylı geribildirimler sayesinde öğrenme süreci hızlandırılır. 
+        Eğitimdeki ilerlemeniz anlık olarak izlenir ve platform, kullanıcı dostu arayüzüyle hem öğrenciler hem de eğitmenler için maksimum verimlilik sağlar.
+    </div>
+    <div class="footer">
+        © 2025 EnesLearn. Tüm Hakları Saklıdır. |
+        <a href="#">Kullanım Şartları</a> |
+        <a href="#">Gizlilik Politikası</a> |
+        <a href="#">Çerezler</a>
+    </div>
+    <script>
+        function toggleWhy() {
+            var x = document.getElementById("whyText");
+            x.style.display = (x.style.display === "block") ? "none" : "block";
+        }
+        function setLanguage(lang) {
+            if(lang === "en") {
+                document.getElementById("welcome").innerText = "Welcome to EnesLearn";
+                document.getElementById("tagline").innerText = "AI-powered English learning platform";
+            } else {
+                document.getElementById("welcome").innerText = "EnesLearn'e Hoş Geldiniz";
+                document.getElementById("tagline").innerText = "Yapay zeka destekli İngilizce öğrenme platformu";
+            }
+        }
+    </script>
 </body>
 </html>

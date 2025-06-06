@@ -19,7 +19,7 @@ async function loadApiKey() {
 const chatForm = document.getElementById('chat-form');
 const userInput = document.getElementById('user-input');
 const chatBox = document.getElementById('chat-box');
-const HF_API_URL = 'https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill';
+const HF_API_URL = 'https://api-inference.huggingface.co/models/microsoft/DialoGPT-small';
 
 function addMessage(text, sender) {
   const div = document.createElement('div');

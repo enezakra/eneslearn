@@ -1,44 +1,106 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnesLearn</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <!-- Favicon integration using a small transparent PNG data URI -->
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGUlEQVQI12P4//8/AwAI/AL+0H8YAAAAAElFTkSuQmCC" type="image/png">
+    <style>
+        body, html {
+            margin: 0; padding: 0; height: 100%; font-family: Arial, sans-serif;
+        }
+        .content {
+            min-height: calc(100vh - 100px);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .footer {
+            position: relative;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        .footer a {
+            color: #8eb6f5;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        #nedenButton {
+            position: absolute;
+            right: 20px;
+            top: -30px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        #langSelect {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 1000;
+        }
+        .lang-tr { display: none; }
+        .lang-en { display: none; }
+    </style>
 </head>
 <body>
-    <div class="language-switcher">
-        <button onclick="setLanguage('tr')">TR</button>
-        <button onclick="setLanguage('en')">EN</button>
+    <select id="langSelect">
+        <option value="tr">TR</option>
+        <option value="en">EN</option>
+    </select>
+    <div class="content">
+        <h1 class="lang-tr">EnesLearn</h1>
+        <h1 class="lang-en">EnesLearn</h1>
+        <p class="lang-tr">Web sitenize hoş geldiniz!</p>
+        <p class="lang-en">Welcome to your website!</p>
     </div>
-    <div class="contact-button" onclick="alert('İletişim paneli daha sonra entegre edilecek.')">Bizimle İletişime Geç</div>
-    <div class="container">
-        <img src="logo.png" alt="Logo" class="logo">
-        <h1 id="welcome">EnesLearn'e Hoş Geldiniz</h1>
-        <p id="tagline">Yapay zeka destekli İngilizce öğrenme platformu</p>
-        <div class="buttons">
-            <button>Giriş Yap</button>
-            <button>Üye Ol</button>
-            <button onclick="alert('Google, Apple, Facebook...')">Diğer Giriş Yöntemleri</button>
-        </div>
-    </div>
-    <div class="why" onclick="toggleWhy()">Neden EnesLearn?</div>
-    <div class="why-text" id="why-text">
-        EnesLearn, yapay zeka destekli algoritmalarla öğrenme sürecinizi kişiselleştirir.
-        Eksiklerinizi tespit eder, size özel içerikler sunar ve gerçek öğrenmeyi hedefler.
-        Eğitim süreciniz oyunlaştırılmış ve Türkçe destekli olarak sunulur.
-    </div>
-    <footer>
-        <p>© 2025 EnesLearn. Tüm Hakları Saklıdır.</p>
+    <div class="footer">
+        <button id="nedenButton">
+            <span class="lang-tr">Neden EnesLearn?</span>
+            <span class="lang-en">Why EnesLearn?</span>
+        </button>
         <p>
-            <a href="#">Kullanım Şartları</a> |
-            <a href="#">Gizlilik Politikası</a> |
-            <a href="#">Çerezler</a>
+            <span class="lang-tr">© 2025 EnesLearn. Tüm Hakları Saklıdır.</span>
+            <span class="lang-en">© 2025 EnesLearn. All Rights Reserved.</span>
         </p>
-        <small>
-            Bu site, kullanıcı deneyimini artırmak için çerezler kullanır. Verileriniz EnesLearn yönetimi tarafından yasal çerçevede korunur.
-        </small>
-    </footer>
+        <p>
+            <a href="#" class="lang-tr">Kullanım Şartları</a>
+            <a href="#" class="lang-tr">Gizlilik Politikası</a>
+            <a href="#" class="lang-tr">Çerezler</a>
+            <a href="#" class="lang-en">Terms of Use</a>
+            <a href="#" class="lang-en">Privacy Policy</a>
+            <a href="#" class="lang-en">Cookies</a>
+        </p>
+    </div>
+
+    <script>
+        // Language selection and persistence
+        const langSelect = document.getElementById('langSelect');
+        const setLanguage = (lang) => {
+            document.querySelectorAll('.lang-tr').forEach(el => { el.style.display = (lang === 'tr') ? 'inline' : 'none'; });
+            document.querySelectorAll('.lang-en').forEach(el => { el.style.display = (lang === 'en') ? 'inline' : 'none'; });
+            localStorage.setItem('lang', lang);
+        };
+
+        // On load, set language from localStorage or default TR
+        const savedLang = localStorage.getItem('lang') || 'tr';
+        langSelect.value = savedLang;
+        setLanguage(savedLang);
+
+        langSelect.addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+        });
+
+        // Redirect to neden page on button click
+        document.getElementById('nedenButton').addEventListener('click', () => {
+            window.location.href = 'neden.html';
+        });
+    </script>
 </body>
 </html>
